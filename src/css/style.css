@@ -1,0 +1,26 @@
+@import "./bootstrap-override.css";
+@import "./colors.css";
+@import "./fonts.css";
+@import "./buttons.css";
+@import "./shared/shared-style.css";
+@import "./navbar.css";
+@import "./footer.css";
+@import "./Home/home.css";
+@import "./product/product.css";
+
+html{
+    scroll-behavior: smooth;
+    height: 100vh;
+}
+body, #root{
+    height: 100vh;
+    position: relative;
+}
+.App{
+    height: 100%;
+    position: relative;
+    display:grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+}

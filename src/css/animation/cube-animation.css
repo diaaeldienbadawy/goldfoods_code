@@ -1,0 +1,104 @@
+@keyframes RandomCubeAnimation-I {
+  0% {
+    left: 0%;
+    top: 0;
+    opacity: 0;
+    transform:  rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    top: 90%;
+    transform:  rotate(360deg);
+  }
+}
+
+@keyframes RandomCubeAnimation-II {
+  0% {
+    left: 0%;
+    top: 20%;
+    opacity: 0;
+    transform:  rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left:100%;
+    top: 80%;
+    opacity: 0;
+    transform:  rotate(360deg);
+  }
+}
+
+@keyframes RandomCubeAnimation-III {
+  0% {
+    left: 0%;
+    top: 40%;
+    opacity: 0;
+    transform:  rotate(0deg);
+  }
+   10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    top: 60%;
+    opacity: 0;
+    transform:  rotate(360deg);
+  }
+}
+
+@keyframes RandomCubeAnimation-IV {
+  0% {
+    left: 0%;
+    top: 80%;
+    opacity: 0;
+    transform:  rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    top: 20%;
+    opacity: 0;
+    transform:  rotate(360deg);
+  }
+}
+
+@keyframes RandomCubeAnimation-V {
+  0% {
+    left: 0%;
+    top: 90%;
+    opacity: 0;
+    transform:  rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    top: 0%;
+    opacity: 0;
+    transform:  rotate(360deg);
+  }
+}

@@ -1,0 +1,37 @@
+@keyframes fishAnimation {
+    0% {
+        top:300%;
+        left:240%;
+        transform: translate(-50%, -50%) rotate(35deg);
+    }
+    25%{
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    75%{
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        top: -100%;
+        left:-400%;
+        transform: translate(-50%, -50%) rotate(-75deg); 
+    }
+}
+
+@keyframes fishTextAnimation{
+    0%{
+        left:400%
+    }
+    25%{
+        left: 0%;
+    }
+    75%{
+        left: 0%;
+    }
+    100%{
+        left: -300%;
+    }
+}

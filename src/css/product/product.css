@@ -1,0 +1,12 @@
+.product-hero-section{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

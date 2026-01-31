@@ -1,0 +1,10 @@
+.footer{
+    padding: 16px 0px;
+}
+
+.footer-icon{
+    width: 22px !important;
+    height: 18px;
+    border-radius: 50%;
+    overflow: hidden;
+}

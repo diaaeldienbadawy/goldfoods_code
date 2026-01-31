@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/sitemap.xaml", "destination": "/sitemap.xaml" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
