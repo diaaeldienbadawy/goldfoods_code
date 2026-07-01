@@ -1,39 +1,218 @@
-@import "../animation/fish-animation.css";
-
-.animated-fish-wrapping{
-    height: auto !important;
-    width: 360px;
-    display: flex;
-    aspect-ratio: 1 / 1;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    border-radius: 100%;
-    position: relative;
+.seed-fish-showcase-box {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05) !important;
 }
 
-.animated-fish{
-    width: 100% ;
-    height: 100% ;
-    object-fit: contain;
-    position: absolute;
-    animation: fishAnimation 4s linear infinite ;
-    z-index: 1;
-}
-.animated-fish-text{
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 40px;
-    color: #FFF;
-    text-align: center;
-    z-index: 2;
-    animation: fishTextAnimation 4s linear infinite;
+/* Details slide-in effect */
+.seed-fish-details {
+  animation: detailsFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-@media(max-width: 768px) {
-    .animated-fish-wrapping{ 
-        width: 200px !important;
-    }
+@keyframes detailsFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.seed-fish-badge-type {
+  background-color: var(--highlight-color);
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.seed-meta-pill {
+  background-color: #f1f7fc;
+  color: #555;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(40, 82, 122, 0.08);
+}
+
+.seed-green-check-icon {
+  background-color: #eafbe7;
+  color: #2ecc71;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* Ocean Portal */
+.seed-ocean-portal {
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #28527a 0%, #0d1b2a 100%);
+  border: 8px solid #ffffff;
+  box-shadow: 0 15px 45px rgba(13, 27, 42, 0.25), inset 0 0 50px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+@media(min-width: 768px) {
+  .seed-ocean-portal {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+/* Wave overlay */
+.water-wave-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.15) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Ocean Bubbles */
+.bubbles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ocean-bubble {
+  position: absolute;
+  bottom: -20px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  animation: floatBubble 6s infinite linear;
+}
+
+.ocean-bubble.b-1 { width: 12px; height: 12px; left: 15%; animation-duration: 5s; animation-delay: 0s; }
+.ocean-bubble.b-2 { width: 8px; height: 8px; left: 45%; animation-duration: 7s; animation-delay: 1.5s; }
+.ocean-bubble.b-3 { width: 16px; height: 16px; left: 70%; animation-duration: 6s; animation-delay: 0.5s; }
+.ocean-bubble.b-4 { width: 10px; height: 10px; left: 30%; animation-duration: 8s; animation-delay: 2s; }
+.ocean-bubble.b-5 { width: 6px; height: 6px; left: 85%; animation-duration: 4s; animation-delay: 3s; }
+
+@keyframes floatBubble {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-420px) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Fish wrapper for rotation / positioning */
+.seed-ocean-fish-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Swim-in and Bobbing Animation Pipeline */
+.seed-ocean-fish-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.45));
+  animation: swimIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards, bobbing 4s ease-in-out infinite 0.8s;
+  transform-origin: center center;
+}
+
+@keyframes swimIn {
+  0% {
+    transform: translateX(120%) scale(0.7) rotate(15deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-1.5deg);
+  }
+}
+
+/* Tabs styling */
+.seed-fish-tab-btn {
+  background: #f8f9fa;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 50px;
+  color: #666;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.seed-fish-tab-btn:hover {
+  background: #eaf6ff;
+  border-color: #28527a33;
+  color: var(--secondary-color);
+}
+
+.seed-fish-tab-btn.active {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(40, 82, 122, 0.25);
+}
+
+.tab-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.seed-fish-tab-btn.active .tab-dot {
+  background-color: var(--primary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+.font-arabic {
+  font-family: 'Open Sans', sans-serif !important;
 }
