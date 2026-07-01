@@ -1,9 +1,9 @@
 import React from 'react';
-import imgPouch from '../../assets/images/seed-el-balad/img_6.jpeg';
-import imgFillet from '../../assets/images/seed-el-balad/img_11.jpeg';
-import imgJars from '../../assets/images/seed-el-balad/img_3.jpeg';
-import imgVacuum from '../../assets/images/seed-el-balad/img_7.jpeg';
-import imgCans from '../../assets/images/seed-el-balad/img_10.jpeg';
+import imgPouch from '../../assets/images/seed-el-balad/img_6.png';
+import imgFillet from '../../assets/images/seed-el-balad/img_11.png';
+import imgJars from '../../assets/images/seed-el-balad/img_3.png';
+import imgVacuum from '../../assets/images/seed-el-balad/img_7.png';
+import imgCans from '../../assets/images/seed-el-balad/img_10.png';
 
 /**
  * SeedElBaladProductsShowcase Component

@@ -14,14 +14,14 @@ const CategorysBar = () => {
 
 
     return (
-        <div id='categorys-bar' className='bg-highlight w-100 py-3 pt-md-5 pb-md-3'>
+        <div id='categorys-bar' className='bg-secondary w-100 py-3 pt-md-5 pb-md-3 border-bottom border-light border-opacity-10'>
             <div className='container'>
                 <div className='d-flex justify-content-center flex-wrap align-items-center gap-2 gap-md-4'>
-                    <h3 className={`${active === 0 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product')}>All</h3>
-                    <h3 className={`${active === 1 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/seed-el-balad')}>SEED EL BALAD</h3>
-                    <h3 className={`${active === 2 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/fish')}>Fish</h3>
-                    <h3 className={`${active === 3 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/meat')}>Meat</h3>
-                    <h3 className={`${active === 4 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/poulrty')}>Poulrty</h3>
+                    <h3 className={`${active === 0 ? 'primary-color' : 'text-white-50'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product')}>All</h3>
+                    <h3 className={`${active === 1 ? 'primary-color' : 'text-white-50'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/seed-el-balad')}>SEED EL BALAD</h3>
+                    <h3 className={`${active === 2 ? 'primary-color' : 'text-white-50'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/fish')}>Fish</h3>
+                    <h3 className={`${active === 3 ? 'primary-color' : 'text-white-50'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/meat')}>Meat</h3>
+                    <h3 className={`${active === 4 ? 'primary-color' : 'text-white-50'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/poulrty')}>Poulrty</h3>
                 </div>
             </div>
         </div>

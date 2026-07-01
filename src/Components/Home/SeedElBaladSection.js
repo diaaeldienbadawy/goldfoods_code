@@ -1,9 +1,9 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import logoImg from '../../assets/images/seed-el-balad/logo.jpeg';
-import imgMain from '../../assets/images/seed-el-balad/img_3.jpeg';
-import imgSecondary from '../../assets/images/seed-el-balad/img_6.jpeg';
-import imgTertiary from '../../assets/images/seed-el-balad/img_7.jpeg';
+import logoImg from '../../assets/images/seed-el-balad/logo.png';
+import imgMain from '../../assets/images/seed-el-balad/img_3.png';
+import imgSecondary from '../../assets/images/seed-el-balad/img_6.png';
+import imgTertiary from '../../assets/images/seed-el-balad/img_7.png';
 
 /**
  * SeedElBaladSection Component
