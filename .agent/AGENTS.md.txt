@@ -1,0 +1,118 @@
+# Project Rules | قواعد المشروع
+
+The following rules must be strictly followed by the agent in this project:
+ يجب على الوكيل الالتزام بالقواعد التالية في هذا المشروع:
+
+1. *Commitment to SOLID Principles / الالتزام بمبادئ الـ SOLID*:
+ Always adhere to SOLID software design principles.
+ الالتزام التام بمبادئ SOLID لتصميم البرمجيات.
+
+2. *Single Responsibility & Modularity / الالتزام بمبدأ الـ Single Responsibility والـ Modularity*:
+ Adhere strictly to the Single Responsibility Principle (SRP) and modular design.
+ الالتزام بمبدأ المسؤولية الواحدة للمكونات والوظائف وتصميم الكود بشكل مجزأ وموديولار.
+
+3. *Separation of UI and Logic / فصل الـ UI Elements عن الـ Logic*:
+ Separate UI elements and rendering logic from business/component logic.
+ فصل عناصر واجهة المستخدم ورندرتها تماماً عن المنطق (logic) الخاص بها.
+
+4. *No Stray Functions / منع الـ Methods التائهة خارج الـ Classes*:
+ Do not write standalone or stray functions/methods outside of a class, unless the function is a custom React Hook.
+ ممنوع كتابة method أو function تائهة بدون Class يحويها، إلا إذا كانت عبارة عن React Hook.
+
+5. *Hook Responsibility / قواعد الـ Hooks*:
+ Any custom hook written must either:
+ - Be responsible for a single specific task/responsibility.
+ - Be a coordinating/composite hook that orchestrates other hooks without containing any explicit business logic itself.
+ أي Hook يتم كتابته يجب أن يكون:
+ - إما مسؤولاً عن وظيفة/حاجة واحدة فقط.
+ - أو يكون Hook تجميعي يقوم بالتنسيق بين Hooks أخرى ولكن دون أن يحتوي على أي logic صريح.
+
+6. *Helper Classes / تجميع الوظائف المتشابهة في Helper Classes*:
+ Group methods with related/similar functionality into helper classes. All methods within these helper classes must be static.
+ تجميع الـ methods المسؤولة عن حاجات متشابهة في Helper Classes، على أن تكون جميع الـ methods داخلها static.
+
+7. *Method Responsibility / مسؤولية الـ Methods*:
+ Every method/function must either:
+ - Be responsible for a single task/responsibility.
+ - Act purely as an orchestrator that calls other methods/functions, containing no explicit business logic of its own.
+ أي method يجب أن تكون:
+ - إما مسؤولة عن حاجة واحدة فقط.
+ - أو تقوم فقط بعمل call لمجموعة methods أخرى دون احتواء منطق (logic) صريح بداخلها.
+
+8. *Component Design / تصميم الـ Components*:
+ Every React component must either:
+ - Represent/render a single specific element/view.
+ - Serve as a container/composite component that aggregates other components. Mixed components (handling both direct low-level rendering and high-level aggregation or multiple unrelated tasks) are strictly forbidden.
+ أي Component يجب أن تكون:
+ - إما بتمثل حاجة واحدة فقط.
+ - أو تجمع Components أخرى مع بعضها.
+ ممنوع خلط الوظائف والـ components التي تقوم بالوظيفتين معاً.
+
+9. *Theming & Styles / الـ Styles والثيم*:
+ Do not use inline, hardcoded, or ad-hoc styles. All styling must depend on and use the project's Theme system.
+ بالنسبة للـ styles، يمنع تماماً كتابة inline styles أو hardcoded styles، ويجب أن تكون جميعها معتمدة على الـ Theme.
+
+10. *Single Declaration per File / ملف واحد لكل عنصر*:
+ Every file must contain exactly one primary entity (e.g., one component, one hook, one class, one helper, etc.). Do not define multiple components, hooks, or classes in a single file.
+ ممنوع أي ملف يحتوي على أكثر من حاجة واحدة (إما component واحدة، أو hook واحد، أو class واحد، وهكذا).
+
+11. *Linting Compliance / الالتزام بقواعد الـ Lint*:
+ Always adhere to the project's ESLint and formatting configurations. Do not bypass or disable lint rules.
+ الالتزام التام بقواعد الـ Lint الخاصة بالمشروع وتنسيق الكود، ويُمنع تعطيلها أو تخطيها.
+
+12. *No any Type / منع استخدام النوع any*:
+ Never use the any type in TypeScript. Always define explicit, precise types or interfaces.
+ ممنوع منعاً باتاً استخدام النوع any في TypeScript، ويجب دائماً تحديد وتعرّيف Types أو Interfaces دقيقة وواضحة.
+
+13. *Method Documentation / توثيق الـ Methods*:
+ Every method/function must be well documented with clear and comprehensive comments/JSDoc describing its purpose, parameters, and return value.
+ يجب توثيق كل method/function بشكل ممتاز وبكتابة تعليقات/JSDoc واضحة وشاملة تشرح الغرض منها، الـ parameters، والقيمة المرجعة.
+
+لو القواعد دي مفيهاش قاعدة بتجبره يلتزم بهيكلة و نظام المشروع زودها و لو فى واحدة مش بتجبره يلتزم بالاستايلات بتاعة المشروع و ادارتها من مكان موحد زودها 
+
+14. *Project Architecture & Structure Compliance / الالتزام بهيكلة المشروع*
+ The agent must strictly follow the existing project architecture, folder structure, naming conventions, and module organization.
+ Do not introduce new architectural patterns, folders, layers, or abstractions unless they match the existing project structure and are justified.
+
+ The agent must:
+ - Place files only in their appropriate existing locations.
+ - Follow existing naming conventions for components, hooks, helpers, services, types, and utilities.
+ - Reuse existing project modules before creating new ones.
+ - Avoid creating duplicate implementations of existing functionality.
+
+ يجب على الوكيل الالتزام التام بهيكلة المشروع الحالية:
+ - ممنوع إنشاء folders أو layers أو patterns جديدة بدون توافق واضح مع Architecture المشروع.
+ - الالتزام بأماكن الملفات الحالية وطريقة تسميتها.
+ - إعادة استخدام الموجود قبل إنشاء أي abstraction جديد.
+ - منع تكرار نفس الـ logic في أكثر من مكان.
+
+15. *Centralized Design System & Styling Management / إدارة موحدة للـ Styles والـ Design System*
+ All UI styling, colors, spacing, typography, sizes, and visual tokens must be managed through the project's existing Theme system, Design System, or styling configuration.
+
+ The agent must:
+ - Never create custom colors, spacing values, typography values, or UI constants directly inside components.
+ - Never introduce arbitrary CSS values unless they are part of the existing design system.
+ - Always reuse existing UI components, style utilities, theme tokens, and shared configurations.
+ - Any new design token must be added to the centralized theme/configuration instead of being used locally.
+
+ يجب إدارة كل الـ styles بشكل مركزي:
+ - ممنوع كتابة ألوان أو أحجام أو spacing بشكل مباشر داخل الـ components.
+ - ممنوع إنشاء styling خاص داخل component.
+ - استخدام الـ Theme والـ Design System الموجودين فقط.
+ - أي قيمة styling جديدة يتم إضافتها في مكانها المركزي وليس استخدامها بشكل مؤقت.
+
+16. *Dependency Direction & Layer Separation / فصل طبقات المشروع*
+ Project layers must respect a clear dependency direction.
+
+ UI components must not directly contain:
+ - API calls.
+ - Data transformation logic.
+ - Business rules.
+ - Complex calculations.
+
+ Business logic must live in dedicated services, use-cases, helpers, or hooks according to the existing project architecture.
+
+ يجب فصل الطبقات:
+ - الـ Components مسؤولة عن العرض فقط.
+ - ممنوع وضع API calls أو business logic داخل الـ UI.
+ - أي logic معقد يتم نقله للمكان المسؤول عنه حسب Architecture المشروع.

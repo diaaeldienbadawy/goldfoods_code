@@ -1,0 +1,223 @@
+/* seed-el-balad-factory.css - Styles for the Seed El Balad factory section */
+
+.seed-factory-banner {
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  margin-top: 50px;
+}
+
+.seed-factory-banner h1 {
+  font-family: 'Open Sans', sans-serif !important;
+  color: #ffffff !important;
+}
+
+.seed-factory-banner .seed-check-icon {
+  color: #4ade80 !important;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.seed-factory-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+  z-index: 1;
+}
+
+.seed-factory-banner-content {
+  position: relative;
+  z-index: 2;
+}
+
+.seed-factory-logo-badge {
+  width: 90px;
+  height: 90px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.seed-factory-logo-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Process Timeline */
+.seed-process-section {
+  padding: 80px 0;
+}
+
+.seed-timeline {
+  position: relative;
+  padding: 40px 0;
+}
+
+/* Vertical line for desktop */
+@media (min-width: 992px) {
+  .seed-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: var(--highlight-color);
+    z-index: 1;
+  }
+}
+
+.seed-timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  z-index: 2;
+}
+
+.seed-timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.seed-timeline-badge {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+  z-index: 3;
+}
+
+@media (max-width: 991px) {
+  .seed-timeline-badge {
+    position: static;
+    transform: none;
+    margin-bottom: 15px;
+  }
+}
+
+.seed-timeline-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.seed-timeline-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.seed-timeline-image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  aspect-ratio: 16 / 10;
+}
+
+.seed-timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.seed-timeline-card:hover .seed-timeline-image img {
+  transform: scale(1.05);
+}
+
+/* Category Showcase */
+.seed-showcase-section {
+  padding: 80px 0;
+  background-color: var(--highlight-color);
+  border-radius: 24px;
+}
+
+.seed-category-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: none;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.seed-category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.seed-category-img-wrapper {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.seed-category-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.seed-category-card:hover .seed-category-img-wrapper img {
+  transform: scale(1.06);
+}
+
+.seed-category-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--secondary-color);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.seed-category-body {
+  padding: 25px;
+}
+
+.seed-category-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-h1-h2);
+  margin-bottom: 10px;
+}
+
+.seed-category-desc {
+  font-size: 14px;
+  color: var(--branch-text);
+  line-height: 1.6;
+  margin: 0;
+}

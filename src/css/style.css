@@ -7,6 +7,8 @@
 @import "./footer.css";
 @import "./Home/home.css";
 @import "./product/product.css";
+@import "./Home/seed-el-balad.css";
+@import "./shared/seed-el-balad-factory.css";
 
 html{
     scroll-behavior: smooth;
