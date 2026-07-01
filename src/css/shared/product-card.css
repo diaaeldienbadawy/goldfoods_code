@@ -1,57 +1,150 @@
-.product-card{
-    width:320px;
-    height: 400px;
+.seed-product-card {
+    background-color: #ffffff;
     border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
     overflow: hidden;
     margin: auto;
-    background-color: var(--secondary-color);
-    position: relative;
+    width: 320px;
+    height: 420px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-}
-.product-card-img{
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    transition: all 0.3s ease-in-out;
-}
-.product-card-wrapping{
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color:transparent;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    transition: all 0.3s ease-in-out;
-}
-.product-card-wave{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    bottom:0;
-    left: 0;
-}
-.product-card:hover .product-card-wrapping{
-    opacity: 1;
-}
-.product-card:hover .product-card-img{
-    transform: translateY(-65px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
 }
 
+.seed-product-card-img-wrapper {
+    background-color: #f7fafc;
+    width: 100%;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    transition: background-color 0.4s ease;
+}
+
+.seed-product-card-img {
+    max-width: 85%;
+    max-height: 85%;
+    object-fit: contain;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.06));
+}
+
+.seed-product-card-body {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.seed-product-card-subtitle {
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+
+.seed-product-card-title {
+    color: var(--secondary-color);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 12px 0;
+    height: 50px; /* Limits title height to maintain card symmetry */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.seed-product-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.seed-rating-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #fff9e6;
+    padding: 6px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 193, 7, 0.15);
+}
+
+.seed-rating-badge .star-icon {
+    width: 14px;
+    height: 14px;
+}
+
+.seed-rating-badge .rating-num {
+    color: #cca000;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.seed-card-action-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 13px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Hover States */
+.seed-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(40, 82, 122, 0.12) !important;
+    border-color: rgba(40, 82, 122, 0.15);
+}
+
+.seed-product-card:hover .seed-product-card-img-wrapper {
+    background-color: #edf5fa;
+}
+
+.seed-product-card:hover .seed-product-card-img {
+    transform: scale(1.06) translateY(-5px);
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12));
+}
+
+.seed-product-card:hover .seed-card-action-btn {
+    color: var(--primary-color);
+    transform: translateX(4px);
+}
+
+/* Responsiveness */
 @media (max-width: 768px) {
-    .product-card{
-        width:280px;
-        height: 350px;
+    .seed-product-card {
+        width: 290px;
+        height: 390px;
     }
     
+    .seed-product-card-img-wrapper {
+        height: 200px;
+    }
+
+    .seed-product-card-body {
+        padding: 16px;
+    }
+
+    .seed-product-card-title {
+        font-size: 16px;
+        height: 44px;
+    }
 }

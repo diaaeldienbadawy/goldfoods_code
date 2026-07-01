@@ -14,11 +14,11 @@ const HomePage = () => {
     <>
       <HeroSection/> 
       <Features/>
-      <HomeProducts/>
       <SeedElBaladSection/>
       <div className="container py-5">
         <SeedElBaladProductsShowcase/>
       </div>
+      <HomeProducts/>
       <HomeFactorySlider/>
       <HomeSuppliers/>
       <HomeAnimatedFish/>

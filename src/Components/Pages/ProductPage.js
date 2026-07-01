@@ -8,6 +8,7 @@ import ProductsList from '../Product/ProductsList'
 import { fishProductsList } from '../../data/fishProductsList'
 import { meatProductsList } from '../../data/meatProductList'
 import { chickenProductsList } from '../../data/chickenProductList'
+import { seedElBaladProductsList } from '../../data/seedElBaladProductsList'
 import PageHeader from '../Shared/PageHeader'
 
 const ProductPage = () => {
@@ -20,6 +21,7 @@ const ProductPage = () => {
           <div className='container'>
             <Routes>
               <Route path="/" element={<ProductsList products={productCatregories} isCateory={true}/>} />
+              <Route path='/seed-el-balad' element={<ProductsList products={seedElBaladProductsList} />} />
               <Route path='/fish' element={<ProductsList products={fishProductsList} />} />
               <Route path='/meat' element={<ProductsList products={meatProductsList} />} />
               <Route path='/poulrty' element={<ProductsList products={chickenProductsList} />} />
