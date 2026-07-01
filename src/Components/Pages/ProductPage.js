@@ -17,7 +17,7 @@ const ProductPage = () => {
         {/* <HeroSection/> */}
         <PageHeader  topLinks={[{title:'Home' , like:'/'}]} pageTitle={'Products'}/>
         <CategorysBar/>
-        <div className='w-100 bg-secondary'>
+        <div className='w-100 bg-highlight'>
           <div className='container'>
             <Routes>
               <Route path="/" element={<ProductsList products={productCatregories} isCateory={true}/>} />

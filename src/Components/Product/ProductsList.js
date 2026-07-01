@@ -10,13 +10,13 @@ const ProductsList = ({products,isCateory}) => {
                 <div className='col-12 col-md-4 '>
                     <div className='row mx-auto' style={{maxWidth:'250px'}}>
                         <div className='col m-auto'>
-                            <div style={{height:'1px', width:'100%',background:'rgba(255,255,255,0.3)'}}></div>
+                            <div style={{height:'1px', width:'100%',background:'rgba(150,150,150,0.7)'}}></div>
                         </div>
                         <div className='col-auto m-auto d-flex flex-column justify-content-center'>
-                            <div className='my-auto text-white f-headline-IV fs-16 w-100 mx-2 text-center' >{prod.cat}</div>
+                            <div className='my-auto branch-text f-headline-IV fs-16 w-100 mx-2 text-center' >{prod.cat}</div>
                         </div>
                         <div className=' m-auto col' >
-                            <div style={{height:'1px',width:'100%',background:'rgba(255,255,255,0.3)'}}></div>
+                            <div style={{height:'1px',width:'100%',background:'rgba(150,150,150,0.7)'}}></div>
                         </div>
                     </div>
                 </div>

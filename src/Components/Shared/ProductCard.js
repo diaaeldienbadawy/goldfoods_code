@@ -15,7 +15,7 @@ const ProductCard = ({ start, end, productImage, subTitle, title, Rating, isCate
 
   return (
     <div 
-      className={`seed-product-card ${start ? 'ms-lg-0' : ''} ${end ? 'me-lg-0' : ''}`}
+      className="seed-product-card"
       onClick={handleAction}
     >
       {/* Product Image Container */}
