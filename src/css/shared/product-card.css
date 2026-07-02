@@ -1,7 +1,7 @@
 .seed-product-card {
     background-color: #ffffff;
     border-radius: 24px;
-    border: 1px solid rgba(40, 82, 122, 0.08);
+    border: none;
     box-shadow: 0 10px 30px rgba(40, 82, 122, 0.05);
     overflow: hidden;
     margin: auto;
@@ -117,7 +117,6 @@
 .seed-product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 22px 45px rgba(40, 82, 122, 0.16) !important;
-    border-color: var(--primary-color);
 }
 
 .seed-product-card:hover .seed-product-card-img-wrapper {
