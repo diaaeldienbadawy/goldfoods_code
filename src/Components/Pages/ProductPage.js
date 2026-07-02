@@ -18,7 +18,7 @@ const ProductPage = () => {
         {/* <HeroSection/> */}
         <PageHeader  topLinks={[{title:'Home' , like:'/'}]} pageTitle={'Products'}/>
         <CategorysBar/>
-        <div className='w-100 bg-white py-5' style={{ boxShadow: '0 -15px 30px rgba(0, 0, 0, 0.02), 0 15px 30px rgba(0, 0, 0, 0.02)', position: 'relative', zIndex: 2 }}>
+        <div className='w-100 bg-highlight py-5'>
           <div className='container'>
             <Routes>
               <Route path="/" element={<ProductsList products={productCatregories} isCateory={true}/>} />
