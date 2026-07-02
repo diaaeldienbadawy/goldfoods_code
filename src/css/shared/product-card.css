@@ -44,6 +44,7 @@
 }
 
 .seed-product-card-subtitle {
+    font-family: 'Open Sans', sans-serif !important;
     color: var(--primary-color);
     font-size: 12px;
     font-weight: 700;
@@ -54,6 +55,7 @@
 }
 
 .seed-product-card-title {
+    font-family: 'Open Sans', sans-serif !important;
     color: var(--secondary-color);
     font-size: 18px;
     font-weight: 700;
