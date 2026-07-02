@@ -41,8 +41,7 @@ const Footer = () => {
                   {icon: phoneIcon , title: '+201000461725', link: 'tel:+201000461725' , phone: true},
                   {
                     icon: locationIcon ,
-                    title: `Second floor, apartment 22, 16 Khesro ST intersection with Abdul Rahman ST,
-                            Mecca Tower next to El-Mesawey, Helwan, Cairo, Egypt`, 
+                    title: `Gold tower, Plot No. 39, North Dar Misr, 15th of May City, Cairo, Egypt`, 
                     link: ''},
                 ]}
               />
