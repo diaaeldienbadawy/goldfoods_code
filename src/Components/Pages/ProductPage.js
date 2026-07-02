@@ -10,6 +10,7 @@ import { meatProductsList } from '../../data/meatProductList'
 import { chickenProductsList } from '../../data/chickenProductList'
 import { seedElBaladProductsList } from '../../data/seedElBaladProductsList'
 import PageHeader from '../Shared/PageHeader'
+import SeedElBaladProductsShowcase from '../Factory/SeedElBaladProductsShowcase'
 
 const ProductPage = () => {
   return (
@@ -21,7 +22,7 @@ const ProductPage = () => {
           <div className='container'>
             <Routes>
               <Route path="/" element={<ProductsList products={productCatregories} isCateory={true}/>} />
-              <Route path='/seed-el-balad' element={<ProductsList products={seedElBaladProductsList} />} />
+              <Route path='/seed-el-balad' element={<SeedElBaladProductsShowcase />} />
               <Route path='/fish' element={<ProductsList products={fishProductsList} />} />
               <Route path='/meat' element={<ProductsList products={meatProductsList} />} />
               <Route path='/poulrty' element={<ProductsList products={chickenProductsList} />} />

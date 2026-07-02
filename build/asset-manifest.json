@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.48684f26.css",
-    "main.js": "/static/js/main.288021f8.js",
+    "main.js": "/static/js/main.51b52770.js",
     "static/media/productsPageImage.png": "/static/media/productsPageImage.b9297b189d848a7c330d.png",
     "static/media/slider2.png": "/static/media/slider2.27f91ae0715549f1f17b.png",
     "static/media/slider5.png": "/static/media/slider5.92f54cab7db74573dc3d.png",
@@ -9,25 +9,25 @@
     "static/media/slider3.png": "/static/media/slider3.22383496cf4245b6fe97.png",
     "static/media/slider7.png": "/static/media/slider7.82970506912e0d64f5ba.png",
     "static/media/slider6.png": "/static/media/slider6.4c5f4e43b3633b97cdae.png",
-    "static/media/img_6.png": "/static/media/img_6.3340a179a73d25eaba7a.png",
     "static/media/slider1.png": "/static/media/slider1.75bf4d2e82cd6f9f72ef.png",
     "static/media/Group-433.png": "/static/media/Group-433.111e039e7529c5529171.png",
-    "static/media/img_3.png": "/static/media/img_3.8428347b2234f66052cd.png",
-    "static/media/img_7.png": "/static/media/img_7.ec995fff0055f441c653.png",
     "static/media/Group-431.png": "/static/media/Group-431.328790836e7a33576b26.png",
     "static/media/heroSection.png": "/static/media/heroSection.e2e866bd430a1732c0d4.png",
     "static/media/pexels-javierbalseiro-16664053 1.png": "/static/media/pexels-javierbalseiro-16664053 1.1b05768bdc42c70e1d88.png",
-    "static/media/logo.png": "/static/media/logo.2f4688e21bd154c0ddeb.png",
-    "static/media/img_10.png": "/static/media/img_10.91da68d7c6c6f73c0021.png",
+    "static/media/logo.png": "/static/media/logo.a01311d095e7b8aa9a06.png",
     "static/media/Group-432.png": "/static/media/Group-432.d9764a64533e42dcae4d.png",
-    "static/media/img_11.png": "/static/media/img_11.33a99f1c6723abe94854.png",
     "static/media/img_2.jpeg": "/static/media/img_2.903c333e64cbcaf20756.jpeg",
     "static/media/img_4.jpeg": "/static/media/img_4.1aae111d3e4448a0106b.jpeg",
     "static/media/img_22.jpeg": "/static/media/img_22.fd92868c828e6bc4aca1.jpeg",
     "static/media/img_21.jpeg": "/static/media/img_21.5fbcede7b59c8ee09874.jpeg",
+    "static/media/img_6.jpeg": "/static/media/img_6.66d1889034666859990a.jpeg",
     "static/media/frigorificos-tunidos4 2.png": "/static/media/frigorificos-tunidos4 2.8000ca71db18e7c109ed.png",
+    "static/media/img_3.jpeg": "/static/media/img_3.5f7285a5427b53e0ea71.jpeg",
+    "static/media/img_7.jpeg": "/static/media/img_7.555910f6b74e3135ee03.jpeg",
+    "static/media/img_11.jpeg": "/static/media/img_11.aedc77a238862ba369f7.jpeg",
     "static/media/logo.jpeg": "/static/media/logo.791197d90e3406ddf39e.jpeg",
     "static/media/fish5.png": "/static/media/fish5.1f464e6631dc4e907215.png",
+    "static/media/img_10.jpeg": "/static/media/img_10.fda2d73bd867bbd7f192.jpeg",
     "static/media/meat.png": "/static/media/meat.f9b338814fd404b86b4c.png",
     "static/media/meat4.png": "/static/media/meat4.f9b338814fd404b86b4c.png",
     "static/media/fish2.png": "/static/media/fish2.2c177cb42266cfb38f18.png",
@@ -71,10 +71,10 @@
     "static/media/Vector.svg": "/static/media/Vector.1f91e8e58b2cc7bce6282ce3e831920c.svg",
     "static/media/small-star.svg": "/static/media/small-star.b13b1a0b97a9b9e73ce93e016f324267.svg",
     "main.48684f26.css.map": "/static/css/main.48684f26.css.map",
-    "main.288021f8.js.map": "/static/js/main.288021f8.js.map"
+    "main.51b52770.js.map": "/static/js/main.51b52770.js.map"
   },
   "entrypoints": [
     "static/css/main.48684f26.css",
-    "static/js/main.288021f8.js"
+    "static/js/main.51b52770.js"
   ]
 }
