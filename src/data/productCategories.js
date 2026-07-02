@@ -1,7 +1,7 @@
 import fishImage from '../assets/images/products/fishes/pfish1.png';
 import chikenImage from '../assets/images/products/chiken.png';
 import meatImage from '../assets/images/products/meat.png';
-import seedLogo from '../assets/images/seed-el-balad/logo.jpeg';
+import seedLogo from '../assets/images/seed-el-balad/logo.png';
 
 export const productCatregories = [
   {
