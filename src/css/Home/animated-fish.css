@@ -134,19 +134,19 @@
 .seed-ocean-fish-wrapper {
   position: absolute;
   top: 50%;
-  left: 5%;
-  width: 90%;
+  left: 11%;
+  width: 78%; /* Scaled down slightly so the fish stays fully inside the portal boundary */
   transform: translateY(-50%);
   z-index: 2;
 }
 
-/* Swim-in and Bobbing Animation Pipeline */
+/* Swim-in and Circular Swimming Animation Pipeline */
 .seed-ocean-fish-img {
   width: 100%;
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.45));
-  animation: swimIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards, bobbing 4s ease-in-out infinite 0.8s;
+  animation: swimIn 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards, circularSwim 6s ease-in-out infinite 0.8s;
   transform-origin: center center;
 }
 
@@ -161,12 +161,19 @@
   }
 }
 
-@keyframes bobbing {
+/* Natural elliptical/circular swimming with rotation adjustments */
+@keyframes circularSwim {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(12px, -8px) rotate(1.5deg);
   }
   50% {
-    transform: translateY(-12px) rotate(-1.5deg);
+    transform: translate(0px, -15px) rotate(0deg);
+  }
+  75% {
+    transform: translate(-12px, -8px) rotate(-1.5deg);
   }
 }
 

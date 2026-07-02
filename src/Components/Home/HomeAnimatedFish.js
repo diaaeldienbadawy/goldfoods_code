@@ -173,7 +173,7 @@ const HomeAnimatedFish = () => {
 
         {/* Tabs / Selection Slider */}
         <div className="seed-fish-tabs mt-5 pt-4 border-top border-light">
-          <div className="d-flex flex-wrap justify-content-center gap-2">
+          <div className="d-flex flex-wrap justify-content-between w-100 gap-2">
             {fishs.map((f, idx) => (
               <button
                 key={idx}
