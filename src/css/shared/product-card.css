@@ -1,8 +1,8 @@
 .seed-product-card {
-    background-color: var(--secondary-color);
+    background-color: #ffffff;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
     overflow: hidden;
     margin: auto;
     width: 320px;
@@ -15,7 +15,7 @@
 }
 
 .seed-product-card-img-wrapper {
-    background-color: rgba(255, 255, 255, 0.03);
+    background-color: #f7fafc;
     width: 100%;
     height: 230px;
     display: flex;
@@ -23,7 +23,7 @@
     justify-content: center;
     overflow: hidden;
     position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     transition: background-color 0.4s ease;
 }
 
@@ -32,7 +32,7 @@
     max-height: 85%;
     object-fit: contain;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.06));
 }
 
 .seed-product-card-body {
@@ -54,7 +54,7 @@
 }
 
 .seed-product-card-title {
-    color: #ffffff;
+    color: var(--secondary-color);
     font-size: 18px;
     font-weight: 700;
     line-height: 1.4;
@@ -77,10 +77,10 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background-color: rgba(255, 255, 255, 0.06);
+    background-color: #fff9e6;
     padding: 6px 12px;
     border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.15);
 }
 
 .seed-rating-badge .star-icon {
@@ -89,7 +89,7 @@
 }
 
 .seed-rating-badge .rating-num {
-    color: var(--primary-color);
+    color: #cca000;
     font-weight: 700;
     font-size: 13px;
 }
@@ -97,7 +97,7 @@
 .seed-card-action-btn {
     background-color: transparent;
     border: none;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 700;
     font-size: 13px;
     padding: 0;
@@ -110,21 +110,21 @@
 /* Hover States */
 .seed-product-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25) !important;
-    border-color: var(--primary-color);
+    box-shadow: 0 20px 40px rgba(40, 82, 122, 0.12) !important;
+    border-color: rgba(40, 82, 122, 0.15);
 }
 
 .seed-product-card:hover .seed-product-card-img-wrapper {
-    background-color: rgba(255, 255, 255, 0.08);
+    background-color: #edf5fa;
 }
 
 .seed-product-card:hover .seed-product-card-img {
     transform: scale(1.06) translateY(-5px);
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.35));
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12));
 }
 
 .seed-product-card:hover .seed-card-action-btn {
-    color: #ffffff;
+    color: var(--primary-color);
     transform: translateX(4px);
 }
 
