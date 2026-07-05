@@ -60,8 +60,8 @@
     z-index: 4;
     display: flex;
     align-items: center;
-    direction: rtl; /* Arabic-first alignment */
-    text-align: right;
+    direction: ltr; /* English-first alignment */
+    text-align: left;
 }
 
 .hero-slide-text {

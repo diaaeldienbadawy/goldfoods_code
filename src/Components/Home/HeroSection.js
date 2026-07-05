@@ -4,26 +4,38 @@ import { useNavigate } from 'react-router-dom';
 const slides = [
   {
     video: "/video2.mp4.mp4",
-    badge: "سيد البلد | Premium Selection",
-    title: "المذاق الذهبي للرنجة المدخنة",
-    desc: "ننتقي أفضل الأسماك من المحيط الأطلسي لنقدم لك فخر الصناعة المصرية بجودة عالمية تستحق مائدتك.",
-    btnText: "اكتشف عائلتنا",
+    badge: "SEED EL BALAD | Premium Selection",
+    title: (
+      <>
+        The <span className="gold-text">Golden</span> Standard of Smoked Herring
+      </>
+    ),
+    desc: "Sourced from the cold, clean waters of the Atlantic, bringing you the pinnacle of smoked herring craftsmanship with world-class quality.",
+    btnText: "Discover Our Family",
     btnLink: "/product/seed-el-balad"
   },
   {
     video: "/video1.mp4.mp4",
-    badge: "سر الصنعة والمذاق | Culinary Craft",
-    title: "رنجة مخلية معالجة بحرفية وشغف",
-    desc: "شرائح رنجة مدخنة بأخشاب الزان والبلّوط الطبيعية بالكامل وخالية من أي كيماويات لطعم أصيل لا يُنسى.",
-    btnText: "تصفح منتجاتنا",
+    badge: "AUTHENTIC CRAFTSMANSHIP | Culinary Art",
+    title: (
+      <>
+        Premium Fillet Smoked to <span className="gold-text">Golden</span> Perfection
+      </>
+    ),
+    desc: "Naturally smoked over premium, chemical-free oak and beechwood, ensuring a rich, authentic flavor profile and a tender texture.",
+    btnText: "Browse Products",
     btnLink: "/product"
   },
   {
     video: "/video3.mp4.mp4",
-    badge: "فخامة التقديم | Authentic Taste",
-    title: "جودة فاخرة تزين كل سفرة",
-    desc: "نهتم بأدق التفاصيل من التمليح الخفيف الموزون لتقديم منتج صحي، آمن، ولذيذ يليق باللمة الطيبة.",
-    btnText: "تواصل معنا",
+    badge: "CULINARY HERITAGE | Authentic Taste",
+    title: (
+      <>
+        Exceptional <span className="gold-text">Quality</span> Fit for Your Table
+      </>
+    ),
+    desc: "Crafted with precise, traditional salting techniques and slowly smoked to deliver a healthy, safe, and mouth-watering experience.",
+    btnText: "Contact Us",
     btnLink: "/contact-us"
   }
 ];
@@ -139,14 +151,7 @@ const HeroSection = () => {
             <div className="hero-slide-text" key={currentSlide}>
               <span className="hero-badge">{slides[currentSlide].badge}</span>
               <h1 className="hero-title">
-                {slides[currentSlide].title.split(' ')[0] === "المذاق" || slides[currentSlide].title.split(' ')[0] === "جودة" ? (
-                  <>
-                    <span className="gold-text">{slides[currentSlide].title.split(' ')[0]}</span>{' '}
-                    {slides[currentSlide].title.split(' ').slice(1).join(' ')}
-                  </>
-                ) : (
-                  slides[currentSlide].title
-                )}
+                {slides[currentSlide].title}
               </h1>
               <p className="hero-desc">{slides[currentSlide].desc}</p>
               
@@ -161,7 +166,7 @@ const HeroSection = () => {
                   onClick={() => navigate('/product')} 
                   className="hero-secondary-btn"
                 >
-                  كل المنتجات
+                  All Products
                 </button>
               </div>
             </div>
@@ -184,7 +189,7 @@ const HeroSection = () => {
       <button 
         className="hero-mute-btn" 
         onClick={toggleMute}
-        title={isMuted ? "تشغيل الصوت" : "كتم الصوت"}
+        title={isMuted ? "Unmute Sound" : "Mute Sound"}
       >
         <span className="material-symbols-outlined">
           {isMuted ? 'volume_off' : 'volume_up'}
