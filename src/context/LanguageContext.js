@@ -276,7 +276,7 @@ export const LanguageProvider = ({ children }) => {
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      <div style={{ direction: language === 'ar' ? 'rtl' : 'ltr' }}>
+      <div dir={language === 'ar' ? 'rtl' : 'ltr'}>
         {children}
       </div>
     </LanguageContext.Provider>

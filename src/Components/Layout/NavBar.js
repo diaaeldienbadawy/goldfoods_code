@@ -54,10 +54,15 @@ const NavBar = () => {
                 </li>
               </ul>
             </div>
-            <div className={`d-flex border-3 border-start gray-border hidden-md phone-container`}> 
-              <div className="phone d-flex ps-md-5 f-phone-number">
+            <div 
+              className="d-flex hidden-md phone-container"
+              style={language === 'en' ? { borderLeft: '3px solid var(--gray-border)' } : { borderRight: '3px solid var(--gray-border)' }}
+            > 
+              <div className={`phone d-flex ${language === 'en' ? 'ps-md-5' : 'pe-md-5'} f-phone-number`}>
                 <div className="phone-icon bg-primary"><img src={phone} alt="My Icon" /></div>
-                <div className="phone-number f-phone-number ps-md-3 c-pointer" onClick={()=>window.open('tel:+201000461725')}>{t('phoneNum')}</div>
+                <div className="phone-number f-phone-number ps-md-3 c-pointer" onClick={()=>window.open('tel:+201000461725')}>
+                  <span dir="ltr">{t('phoneNum')}</span>
+                </div>
               </div>
             </div>
         </nav>
