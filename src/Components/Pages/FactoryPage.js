@@ -7,11 +7,14 @@ import FactoryLocation from '../Factory/FactoryLocation'
 import SeedElBaladFactoryHeader from '../Factory/SeedElBaladFactoryHeader'
 import SeedElBaladProductionProcess from '../Factory/SeedElBaladProductionProcess'
 import SeedElBaladProductsShowcase from '../Factory/SeedElBaladProductsShowcase'
+import { useLanguage } from '../../context/LanguageContext';
 
 const FactoryPage = () => {
+  const { t } = useLanguage()
+
   return (
     <>
-      <PageHeader topLinks={[{title:'Home' , like:'/'}]} pageTitle={'Factory'}/> 
+      <PageHeader topLinks={[{title: t('home') , like:'/'}]} pageTitle={t('factory')}/> 
       <div className="container py-3">
         <SeedElBaladFactoryHeader/>
       </div>

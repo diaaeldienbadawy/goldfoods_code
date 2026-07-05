@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useNav } from '../../hocks/layout/useNav';
+import { useLanguage } from '../../context/LanguageContext';
 import fish1 from '../../assets/images/products/fishes/fish1.png';
 import fish2 from '../../assets/images/products/fishes/fish2.png';
 import fish3 from '../../assets/images/products/fishes/fish3.png';
@@ -7,62 +8,69 @@ import fish4 from '../../assets/images/products/fishes/fish4.png';
 import fish5 from '../../assets/images/products/fishes/fish5.png';
 import fish6 from '../../assets/images/products/fishes/fish6.png';
 
-const fishs = [
-  {
-    fish: fish1,
-    title: "Frozen Mackerel",
-    titleAr: "ماكريل مجمد",
-    scientific: "Scomber scombrus",
-    origin: "North Atlantic Ocean, Norway",
-    facts: ["Rich in Omega-3 fatty acids", "Firm texture & rich oils", "Ideal for grilling and smoking"]
-  },
-  {
-    fish: fish2,
-    title: "Horse Mackerel",
-    titleAr: "باغة (ماكريل الحصان)",
-    scientific: "Trachurus trachurus",
-    origin: "East Atlantic & Mediterranean",
-    facts: ["High quality protein source", "Distinctive savory flavor", "Highly popular in traditional Mediterranean dishes"]
-  },
-  {
-    fish: fish3,
-    title: "Silver Smelt",
-    scientific: "Argentina silus",
-    titleAr: "سيلفر سميلت",
-    origin: "North Atlantic Waters",
-    facts: ["Delicate sweet flavor", "Very low fat content", "Excellent for light pan-frying"]
-  },
-  {
-    fish: fish4,
-    title: "Frozen Herring",
-    titleAr: "رنجة مجمدة",
-    scientific: "Clupea harengus",
-    origin: "North Sea, Netherlands",
-    facts: ["Premium fat ratio", "Tender meat texture", "Primary choice for smoking process"]
-  },
-  {
-    fish: fish5,
-    title: "Frozen Salmon",
-    titleAr: "سالمون مجمد",
-    scientific: "Salmo salar",
-    origin: "Cold waters of Norway",
-    facts: ["Superfood rich in healthy nutrients", "Soft texture & premium color", "Fillet-grade export quality"]
-  },
-  {
-    fish: fish6,
-    title: "Smoked Herring",
-    titleAr: "رنجة مدخنة فاخرة",
-    scientific: "Clupea harengus (Smoked)",
-    origin: "Gold Foods Factory, Helwan",
-    facts: ["Natural beechwood smoked", "Lightly salted to perfection", "Authentic traditional Egyptian taste"]
-  }
-];
-
 const HomeAnimatedFish = () => {
+  const { language, t } = useLanguage();
   const [index, setIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const autoPlayTimer = useRef(null);
   const { nav, scrollTop } = useNav();
+
+  const fishs = [
+    {
+      fish: fish1,
+      title: language === 'en' ? "Frozen Mackerel" : "ماكريل مجمد",
+      scientific: "Scomber scombrus",
+      origin: language === 'en' ? "North Atlantic Ocean, Norway" : "شمال المحيط الأطلسي، النرويج",
+      facts: language === 'en' 
+        ? ["Rich in Omega-3 fatty acids", "Firm texture & rich oils", "Ideal for grilling and smoking"]
+        : ["غني بأحماض أوميغا 3 الدهنية الأساسية", "قوام متماسك ونسبة زيوت طبيعية مثالية", "ممتاز للشواء والتدخين والطهي"]
+    },
+    {
+      fish: fish2,
+      title: language === 'en' ? "Horse Mackerel" : "باغة (ماكريل الحصان)",
+      scientific: "Trachurus trachurus",
+      origin: language === 'en' ? "East Atlantic & Mediterranean" : "شرق المحيط الأطلسي والبحر المتوسط",
+      facts: language === 'en'
+        ? ["High quality protein source", "Distinctive savory flavor", "Highly popular in traditional Mediterranean dishes"]
+        : ["مصدر بروتين ممتاز وسهل الهضم", "نكهة مميزة ومذاق شهي وغني", "شعبية كبيرة في أطباق البحر الأبيض المتوسط"]
+    },
+    {
+      fish: fish3,
+      title: language === 'en' ? "Silver Smelt" : "سيلفر سميلت",
+      scientific: "Argentina silus",
+      origin: language === 'en' ? "North Atlantic Waters" : "مياه شمال المحيط الأطلسي",
+      facts: language === 'en'
+        ? ["Delicate sweet flavor", "Very low fat content", "Excellent for light pan-frying"]
+        : ["نكهة حلوة خفيفة ومستساغة جداً", "محتوى دهني منخفض للغاية وخفيف", "ممتاز للقلي الخفيف والتحمير السريع"]
+    },
+    {
+      fish: fish4,
+      title: language === 'en' ? "Frozen Herring" : "رنجة مجمدة",
+      scientific: "Clupea harengus",
+      origin: language === 'en' ? "North Sea, Netherlands" : "بحر الشمال، هولندا",
+      facts: language === 'en'
+        ? ["Premium fat ratio", "Tender meat texture", "Primary choice for smoking process"]
+        : ["نسبة دسم طبيعية ممتازة ومثالية", "قوام طري ولحم متماسك وفاتح", "الاختيار الأول والأساسي لعمليات التدخين"]
+    },
+    {
+      fish: fish5,
+      title: language === 'en' ? "Frozen Salmon" : "سالمون مجمد",
+      scientific: "Salmo salar",
+      origin: language === 'en' ? "Cold waters of Norway" : "مياه النرويج الباردة والنقية",
+      facts: language === 'en'
+        ? ["Superfood rich in healthy nutrients", "Soft texture & premium color", "Fillet-grade export quality"]
+        : ["غذاء خارق غني بالعناصر الغذائية الهامة والفسفور", "قوام ناعم وطعم غني مع لون طبيعي ممتاز", "جودة تصديرية فاخرة ومناسبة للفيليه"]
+    },
+    {
+      fish: fish6,
+      title: language === 'en' ? "Smoked Herring" : "رنجة مدخنة فاخرة",
+      scientific: "Clupea harengus (Smoked)",
+      origin: language === 'en' ? "Gold Foods Factory, Belbeis" : "مصنع جولد فودز، بلبيس",
+      facts: language === 'en'
+        ? ["Natural beechwood smoked", "Lightly salted to perfection", "Authentic traditional taste"]
+        : ["مدخنة بخشب الزان البكر الطبيعي 100%", "تمليح خفيف متوازن يضمن نكهة رائعة وصحية", "طعم أصيل ومذاق تقليدي لا ينسى"]
+    }
+  ];
 
   const activeFish = fishs[index];
 
@@ -78,7 +86,7 @@ const HomeAnimatedFish = () => {
         clearInterval(autoPlayTimer.current);
       }
     };
-  }, [isAutoPlaying, index]);
+  }, [isAutoPlaying, fishs.length]);
 
   // Handle manual tab select
   const handleSelect = (idx) => {
@@ -96,8 +104,8 @@ const HomeAnimatedFish = () => {
   return (
     <div className="container py-5 mt-4">
       <div className="text-center mb-5">
-        <span className="text-uppercase tracking-wider fw-bold text-muted" style={{ fontSize: '13px', letterSpacing: '2px' }}>Imported Varieties</span>
-        <h2 className="fw-bold mt-2 text-dark" style={{ fontSize: '36px' }}>Our Premium Fish Species / سلالات الأسماك الفاخرة</h2>
+        <span className="text-uppercase tracking-wider fw-bold text-muted" style={{ fontSize: '13px', letterSpacing: '2px' }}>{t('importedVarieties')}</span>
+        <h2 className="fw-bold mt-2 text-dark" style={{ fontSize: '36px' }}>{language === 'en' ? 'Our Premium Fish Species' : 'سلالات الأسماك الفاخرة لدينا'}</h2>
         <div className="mx-auto bg-primary mt-3" style={{ width: '60px', height: '4px', borderRadius: '2px' }}></div>
       </div>
 
@@ -106,22 +114,19 @@ const HomeAnimatedFish = () => {
           
           {/* Details Column */}
           <div className="col-lg-6 order-2 order-lg-1">
-            <div className="seed-fish-details" key={index}>
-              <span className="seed-fish-badge-type mb-3">Premium Selection</span>
+            <div className="seed-fish-details" key={`${index}-${language}`}>
+              <span className="seed-fish-badge-type mb-3">{t('subBrand')}</span>
               
-              <h3 className="fw-bold text-dark mb-1 fs-32">
+              <h3 className="fw-bold text-dark mb-3 fs-32">
                 {activeFish.title}
               </h3>
-              <h4 className="fw-bold text-primary mb-3 fs-24 font-arabic">
-                {activeFish.titleAr}
-              </h4>
 
               <div className="d-flex flex-wrap gap-3 mb-4">
                 <span className="seed-meta-pill">
-                  <strong>Scientific:</strong> <em>{activeFish.scientific}</em>
+                  <strong>{language === 'en' ? 'Scientific' : 'الاسم العلمي'}:</strong> <em>{activeFish.scientific}</em>
                 </span>
                 <span className="seed-meta-pill">
-                  <strong>Origin:</strong> {activeFish.origin}
+                  <strong>{language === 'en' ? 'Origin' : 'المنشأ'}:</strong> {activeFish.origin}
                 </span>
               </div>
 
@@ -138,7 +143,7 @@ const HomeAnimatedFish = () => {
                 className="solid-primary-button f-call-to-action px-5 py-3 rounded-pill"
                 onClick={() => { nav('/product'); scrollTop(); }}
               >
-                Explore Specifications / التفاصيل الفنية
+                {t('exploreSpecs')}
               </button>
             </div>
           </div>

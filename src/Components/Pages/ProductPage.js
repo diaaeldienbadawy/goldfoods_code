@@ -1,5 +1,4 @@
 import React from 'react'
-import HeroSection from '../Product/HeroSection'
 import CategorysBar from '../Product/CategorysBar'
 import { productCatregories } from '../../data/productCategories'
 import HomePartner from '../Home/HomePartner'
@@ -8,15 +7,16 @@ import ProductsList from '../Product/ProductsList'
 import { fishProductsList } from '../../data/fishProductsList'
 import { meatProductsList } from '../../data/meatProductList'
 import { chickenProductsList } from '../../data/chickenProductList'
-import { seedElBaladProductsList } from '../../data/seedElBaladProductsList'
 import PageHeader from '../Shared/PageHeader'
 import SeedElBaladProductsShowcase from '../Factory/SeedElBaladProductsShowcase'
+import { useLanguage } from '../../context/LanguageContext';
 
 const ProductPage = () => {
+  const { t } = useLanguage()
+
   return (
     <>
-        {/* <HeroSection/> */}
-        <PageHeader  topLinks={[{title:'Home' , like:'/'}]} pageTitle={'Products'}/>
+        <PageHeader  topLinks={[{title: t('home') , like:'/'}]} pageTitle={t('product')}/>
         <CategorysBar/>
         <div className='w-100 bg-highlight py-5'>
           <div className='container'>

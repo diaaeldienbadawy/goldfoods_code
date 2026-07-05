@@ -127,20 +127,20 @@
 }
 
 .hero-primary-btn {
-    background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #f39c12 100%);
     color: #ffffff;
     padding: 12px 28px;
     border-radius: 50px;
     font-weight: 700;
     border: none;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(211, 84, 0, 0.35);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
     text-decoration: none !important;
 }
 
 .hero-primary-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(211, 84, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
     color: #ffffff;
 }
 

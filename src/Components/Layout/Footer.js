@@ -9,9 +9,12 @@ import locationIcon from '../../assets/images/icons/mdi_location.svg'
 import phoneIcon from '../../assets/images/icons/small-phone-icon.svg'
 import { useNav } from '../../hocks/layout/useNav'
 import FooterMenu from './Footer/FooterMenu'
+import { useLanguage } from '../../context/LanguageContext';
 
 const Footer = () => {
-  const { nav , location , setActiveLink , activeLink , isOpen , setIsOpen } = useNav()
+  const { nav } = useNav()
+  const { t } = useLanguage()
+
   return (
     <div className='footer-container bg-highlight py-2'>
       <div className='container'>
@@ -24,7 +27,7 @@ const Footer = () => {
           <div className='row justify-content-between pb-5'>
             <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-5'>
               <div className='f-body-text px-3'>
-                Premium frozen seafood and meats, carefully imported with exceptional quality.
+                {t('footerDesc')}
               </div>
               <div className='d-flex justify-content-start m-2 pt-2'>
                 <img src={facebookIcon} className='m-2' alt="My Icon" />
@@ -35,20 +38,20 @@ const Footer = () => {
             </div>
             <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-5'>
               <FooterMenu
-                title={'Contact us'}
+                title={t('contactUs')}
                 items={[
                   {icon: webIcon , title: 'Ceo@goldfoods.net', link: 'mailto:Ceo@goldfoods.net' , email: true},
-                  {icon: phoneIcon , title: '+201000461725', link: 'tel:+201000461725' , phone: true},
+                  {icon: phoneIcon , title: t('phoneNum'), link: `tel:${t('phoneNum')}` , phone: true},
                   {
                     icon: locationIcon ,
-                    title: `Gold tower, Plot No. 39, North Dar Misr, 15th of May City, Cairo, Egypt`, 
+                    title: t('officeDetails'), 
                     link: ''},
                 ]}
               />
             </div>
             <div className='col-xl-1 col-lg-4 col-md-12 col-sm-12 pb-5'>
               <FooterMenu
-                title={'Products'}
+                title={t('products')}
                 items={[
                   {title: 'Mackerel', link: '/product/fish'},
                   {title: 'Herring', link: '/product/fish'},
@@ -59,20 +62,20 @@ const Footer = () => {
             </div>
             <div className='col-xl-1 col-lg-4 col-md-12 col-sm-12'> 
                 <FooterMenu
-                  title={`Resources`}
+                  title={t('resources')}
                   items={[
-                    {title: 'Home', link: '/'},
-                    {title: 'Factory', link: '/factory'},
-                    {title: 'Product', link: '/product'},
-                    {title: 'About', link: '/about-us'},
-                    {title: 'Contact', link: '/contact-us'},
+                    {title: t('home'), link: '/'},
+                    {title: t('factory'), link: '/factory'},
+                    {title: t('product'), link: '/product'},
+                    {title: t('aboutUs'), link: '/about-us'},
+                    {title: t('contact'), link: '/contact-us'},
                   ]}
                 />
             </div>
           </div>
           <div className='d-flex justify-content-end'>
             <div className='branch-text p-0'>
-              © 2025 Gold Foods. All rights reserved.
+              {t('rightsReserved')}
             </div>
           </div>
         </div>

@@ -1,56 +1,76 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-
-const slides = [
-  {
-    video: "/video2.mp4.mp4",
-    badge: "SEED EL BALAD | Premium Selection",
-    title: (
-      <>
-        The <span className="gold-text">Golden</span> Standard of Smoked Herring
-      </>
-    ),
-    desc: "Sourced from the cold, clean waters of the Atlantic, bringing you the pinnacle of smoked herring craftsmanship with world-class quality.",
-    btnText: "Discover Our Family",
-    btnLink: "/product/seed-el-balad"
-  },
-  {
-    video: "/video1.mp4.mp4",
-    badge: "AUTHENTIC CRAFTSMANSHIP | Culinary Art",
-    title: (
-      <>
-        Premium Fillet Smoked to <span className="gold-text">Golden</span> Perfection
-      </>
-    ),
-    desc: "Naturally smoked over premium, chemical-free oak and beechwood, ensuring a rich, authentic flavor profile and a tender texture.",
-    btnText: "Browse Products",
-    btnLink: "/product"
-  },
-  {
-    video: "/video3.mp4.mp4",
-    badge: "CULINARY HERITAGE | Authentic Taste",
-    title: (
-      <>
-        Exceptional <span className="gold-text">Quality</span> Fit for Your Table
-      </>
-    ),
-    desc: "Crafted with precise, traditional salting techniques and slowly smoked to deliver a healthy, safe, and mouth-watering experience.",
-    btnText: "Contact Us",
-    btnLink: "/contact-us"
-  }
-];
+import { useLanguage } from '../../context/LanguageContext';
 
 const HeroSection = () => {
+  const { language, t } = useLanguage();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const videoRefs = useRef([]);
   const navigate = useNavigate();
   const timerRef = useRef(null);
 
+  const slides = [
+    {
+      video: "/video2.mp4.mp4",
+      badge: language === 'en' ? "SEED EL BALAD | Premium Selection" : "سيد البلد | اختيار النخبة الفاخر",
+      title: language === 'en' ? (
+        <>
+          The <span className="gold-text">Golden</span> Standard of Smoked Herring
+        </>
+      ) : (
+        <>
+          <span className="gold-text">المعيار</span> الذهبي للرنجة المدخنة
+        </>
+      ),
+      desc: language === 'en' 
+        ? "Sourced from the cold, clean waters of the Atlantic, bringing you the pinnacle of smoked herring craftsmanship with world-class quality."
+        : "ننتقي أفضل الأسماك من المحيط الأطلسي لنقدم لك فخر الصناعة المصرية بجودة عالمية تستحق مائدتك.",
+      btnText: language === 'en' ? "Discover Our Family" : "اكتشف عائلتنا",
+      btnLink: "/product/seed-el-balad"
+    },
+    {
+      video: "/video1.mp4.mp4",
+      badge: language === 'en' ? "AUTHENTIC CRAFTSMANSHIP | Culinary Art" : "حرفية أصيلة | فن الطهي والتقديم",
+      title: language === 'en' ? (
+        <>
+          Premium Fillet Smoked to <span className="gold-text">Golden</span> Perfection
+        </>
+      ) : (
+        <>
+          فيليه فاخر مدخن لدرجة <span className="gold-text">الكمال</span> الذهبية
+        </>
+      ),
+      desc: language === 'en'
+        ? "Naturally smoked over premium, chemical-free oak and beechwood, ensuring a rich, authentic flavor profile and a tender texture."
+        : "شرائح رنجة مدخنة بأخشاب الزان والبلّوط الطبيعية بالكامل وخالية من أي كيماويات لطعم أصيل لا يُنسى.",
+      btnText: language === 'en' ? "Browse Products" : "تصفح منتجاتنا",
+      btnLink: "/product"
+    },
+    {
+      video: "/video3.mp4.mp4",
+      badge: language === 'en' ? "CULINARY HERITAGE | Authentic Taste" : "إرث عريق | الطعم الأصيل المميز",
+      title: language === 'en' ? (
+        <>
+          Exceptional <span className="gold-text">Quality</span> Fit for Your Table
+        </>
+      ) : (
+        <>
+          <span className="gold-text">جودة</span> استثنائية تليق بسفرتك
+        </>
+      ),
+      desc: language === 'en'
+        ? "Crafted with precise, traditional salting techniques and slowly smoked to deliver a healthy, safe, and mouth-watering experience."
+        : "نهتم بأدق التفاصيل من التمليح الخفيف الموزون لتقديم منتج صحي، آمن، ولذيذ يليق باللمة الطيبة.",
+      btnText: language === 'en' ? "Contact Us" : "تواصل معنا",
+      btnLink: "/contact-us"
+    }
+  ];
+
   // Set up video references list
   useEffect(() => {
     videoRefs.current = videoRefs.current.slice(0, slides.length);
-  }, []);
+  }, [slides.length]);
 
   // Handle slide auto-rotation
   const startTimer = () => {
@@ -65,7 +85,7 @@ const HeroSection = () => {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, []);
+  }, [slides.length]);
 
   // Play/Pause active video and handle mute state
   useEffect(() => {
@@ -148,7 +168,7 @@ const HeroSection = () => {
         <div className="row w-100 justify-content-start">
           <div className="col-lg-8 col-md-10">
             {/* Key attribute changes triggers text animations */}
-            <div className="hero-slide-text" key={currentSlide}>
+            <div className="hero-slide-text" key={`${currentSlide}-${language}`}>
               <span className="hero-badge">{slides[currentSlide].badge}</span>
               <h1 className="hero-title">
                 {slides[currentSlide].title}
@@ -166,7 +186,7 @@ const HeroSection = () => {
                   onClick={() => navigate('/product')} 
                   className="hero-secondary-btn"
                 >
-                  All Products
+                  {t('allProducts')}
                 </button>
               </div>
             </div>
@@ -189,7 +209,7 @@ const HeroSection = () => {
       <button 
         className="hero-mute-btn" 
         onClick={toggleMute}
-        title={isMuted ? "Unmute Sound" : "Mute Sound"}
+        title={isMuted ? t('Unmute Sound') : t('Mute Sound')}
       >
         <span className="material-symbols-outlined">
           {isMuted ? 'volume_off' : 'volume_up'}

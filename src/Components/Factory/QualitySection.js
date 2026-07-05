@@ -4,8 +4,11 @@ import bgImage2 from '../../assets/images/Vector-289.png'
 import checkImage from '../../assets/images/icons/check-mark.png'
 import sectionImage from '../../assets/images/Group-433.png'
 import WhyChoseUs from './WhyChoseUs'
+import { useLanguage } from '../../context/LanguageContext';
 
 const QualitySection = () => {
+  const { language, t } = useLanguage()
+
   return (
     <div className='py-5 mt-5 position-relative'>
         <div className='position-absolute top-0 start-0 w-100 h-100 d-flex flex-column'>
@@ -30,17 +33,47 @@ const QualitySection = () => {
 
                     </div>
                     <h3 className=' py-md-3'>
-                        Our Factory
+                        {t('factory')}
                     </h3>
                     <h2 className='fw-bold py-md-3' style={{ fontSize: '32px' }}>
-                        Our Herring Production Process
+                        {language === 'en' ? 'Our Herring Production Process' : 'خطوات تصنيع وإنتاج الرنجة لدينا'}
                     </h2>
                     <div className='d-flex flex-column justify-content-center'>
-                        <Item title={'Careful Selection'} text={'We start with the finest quality herring, sourced fresh or frozen and hand-selected for size and freshness.'}/>
-                        <Item title={'Natural Salting'} text={'Fish are salted using traditional methods with pure, chemical-free salt, ensuring perfect flavor and preservation.'}/>
-                        <Item title={'Drying & Preparation'} text={'After salting, the fish are left to dry in a hygienic, climate-controlled environment to prepare for smoking.'}/>
-                        <Item title={'Traditional Smoking'} text={'Our herring is smoked over natural hardwoods like beech or oak, giving it that rich, smoky aroma without artificial additives.'}/>
-                        <Item title={'Cooling & Packing'} text={'Once smoked, the herring is immediately cooled and hygienically packed to maintain freshness and quality.'}/>
+                        <Item 
+                          title={language === 'en' ? 'Careful Selection' : 'الاختيار اليدوي الدقيق'} 
+                          text={language === 'en' 
+                            ? 'We start with the finest quality herring, sourced fresh or frozen and hand-selected for size and freshness.'
+                            : 'نبدأ بأجود أسماك الرنجة، المستوردة طازجة أو مجمدة والمختارة يدوياً بعناية للحجم والجودة الممتازة.'
+                          }
+                        />
+                        <Item 
+                          title={language === 'en' ? 'Natural Salting' : 'التمليح الطبيعي الموزون'} 
+                          text={language === 'en' 
+                            ? 'Fish are salted using traditional methods with pure, chemical-free salt, ensuring perfect flavor and preservation.'
+                            : 'يتم تمليح الأسماك باستخدام الطرق التقليدية بالملح الصافي الخالي من المواد الكيميائية لضمان النكهة المثالية.'
+                          }
+                        />
+                        <Item 
+                          title={language === 'en' ? 'Drying & Preparation' : 'التجفيف والتحضير للتدخين'} 
+                          text={language === 'en' 
+                            ? 'After salting, the fish are left to dry in a hygienic, climate-controlled environment to prepare for smoking.'
+                            : 'بعد التمليح، تُترك الأسماك لتجف في بيئة صحية خاضعة للرقابة المناخية تمهيداً لبدء عملية التدخين.'
+                          }
+                        />
+                        <Item 
+                          title={language === 'en' ? 'Traditional Smoking' : 'التدخين الخشبي التقليدي'} 
+                          text={language === 'en' 
+                            ? 'Our herring is smoked over natural hardwoods like beech or oak, giving it that rich, smoky aroma without artificial additives.'
+                            : 'يتم تدخين الرنجة فوق أخشاب الغابات الطبيعية مثل الزان أو البلوط، لتكتسب تلك الرائحة المدخنة المميزة بدون إضافات.'
+                          }
+                        />
+                        <Item 
+                          title={language === 'en' ? 'Cooling & Packing' : 'التبريد والتعبئة الصحية'} 
+                          text={language === 'en' 
+                            ? 'Once smoked, the herring is immediately cooled and hygienically packed to maintain freshness and quality.'
+                            : 'بمجرد التدخين، يتم تبريد الرنجة فوراً وتعبئتها بطريقة صحية للمحافظة التامة على الطزاجة والجودة.'
+                          }
+                        />
                     </div>
                 </div>
             </div>
@@ -52,7 +85,7 @@ const QualitySection = () => {
         </div>
       </div>
 
-            <WhyChoseUs/>
+      <WhyChoseUs/>
 
     </div>
   )

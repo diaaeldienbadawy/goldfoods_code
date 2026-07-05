@@ -4,6 +4,7 @@ import imgFillet from '../../assets/images/seed-el-balad/img_11.jpeg';
 import imgJars from '../../assets/images/seed-el-balad/img_3.jpeg';
 import imgVacuum from '../../assets/images/seed-el-balad/img_7.jpeg';
 import imgCans from '../../assets/images/seed-el-balad/img_10.jpeg';
+import { useLanguage } from '../../context/LanguageContext';
 
 /**
  * SeedElBaladProductsShowcase Component
@@ -14,35 +15,37 @@ import imgCans from '../../assets/images/seed-el-balad/img_10.jpeg';
  * @returns {React.JSX.Element} The rendered product showcase component.
  */
 const SeedElBaladProductsShowcase = () => {
+  const { t } = useLanguage();
+
   const categories = [
     {
-      title: 'Smoked Herring Pouch / رنجة مدخنة (ظرف)',
-      desc: 'Stand-up zipper pouches containing premium smoked herring. Sealed to preserve natural oils and smokiness with clear nutrition facts.',
-      tag: 'Best Seller',
+      title: t('pouchTitle'),
+      desc: t('pouchDesc'),
+      tag: t('pouchTag'),
       image: imgPouch
     },
     {
-      title: 'Fresh Fillet Slices / شرائح فيليه طازجة',
-      desc: 'Skinless and boneless premium smoked herring fillets sliced and vacuum-sealed in pouches. Easy, clean, and ready to serve.',
-      tag: 'Fillet Slices',
+      title: t('filletTitle'),
+      desc: t('filletDesc'),
+      tag: t('filletTag'),
       image: imgFillet
     },
     {
-      title: 'Gourmet Paste Jars / معجون رنجة فاخر (برطمانات)',
-      desc: 'Rich, smooth smoked herring paste blended with premium spices, packed in glass jars and nestled on ice inside premium boxes.',
-      tag: 'Gourmet Paste',
+      title: t('jarsTitle'),
+      desc: t('jarsDesc'),
+      tag: t('jarsTag'),
       image: imgJars
     },
     {
-      title: 'Vacuum Sealed Boxes / رنجة مغلفة حرارياً',
-      desc: 'Whole golden-smoked herrings vacuum-sealed in heavy food-grade film, packed in sturdy blue brand cartons for bulk export and retail.',
-      tag: 'Vacuum Pack',
+      title: t('vacuumTitle'),
+      desc: t('vacuumDesc'),
+      tag: t('vacuumTag'),
       image: imgVacuum
     },
     {
-      title: 'Canned Herring / رنجة معلبة سهلة الفتح',
-      desc: 'Easy-open cans containing smoked herring chunks in high-quality vegetable oil. Highly durable packaging for long-term storage.',
-      tag: 'Canned Food',
+      title: t('cannedTitle'),
+      desc: t('cannedDesc'),
+      tag: t('cannedTag'),
       image: imgCans
     }
   ];
@@ -51,8 +54,8 @@ const SeedElBaladProductsShowcase = () => {
     <section className="seed-showcase-section" id="seed-products-showcase">
       <div className="container">
         <div className="text-center mb-5">
-          <span className="text-uppercase tracking-wider fw-bold text-muted" style={{ fontSize: '14px', letterSpacing: '2px' }}>Product Range</span>
-          <h2 className="fw-bold mt-2 text-dark" style={{ fontSize: '36px' }}>SEED EL BALAD Packagings & Varieties</h2>
+          <span className="text-uppercase tracking-wider fw-bold text-muted" style={{ fontSize: '14px', letterSpacing: '2px' }}>{t('productRange')}</span>
+          <h2 className="fw-bold mt-2 text-dark" style={{ fontSize: '36px' }}>{t('varietiesTitle')}</h2>
           <div className="mx-auto bg-primary mt-3" style={{ width: '60px', height: '4px', borderRadius: '2px' }}></div>
         </div>
         

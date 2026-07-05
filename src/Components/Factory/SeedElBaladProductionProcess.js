@@ -3,6 +3,7 @@ import imgStage1 from '../../assets/images/seed-el-balad/img_2.jpeg';
 import imgStage2 from '../../assets/images/seed-el-balad/img_4.jpeg';
 import imgStage3 from '../../assets/images/seed-el-balad/img_21.jpeg';
 import imgStage4 from '../../assets/images/seed-el-balad/img_22.jpeg';
+import { useLanguage } from '../../context/LanguageContext';
 
 /**
  * SeedElBaladProductionProcess Component
@@ -13,32 +14,42 @@ import imgStage4 from '../../assets/images/seed-el-balad/img_22.jpeg';
  * @returns {React.JSX.Element} The rendered timeline component.
  */
 const SeedElBaladProductionProcess = () => {
+  const { language } = useLanguage()
+
   const steps = [
     {
       num: '1',
-      title: 'Sourcing & Hanging / الاختيار والتعليق',
-      desc: 'We select premium, fatty herring imported from sustainable Atlantic fisheries. The fish are salted naturally and carefully arranged on stainless steel racks in a clean, temperature-controlled environment.',
+      title: language === 'en' ? 'Sourcing & Hanging' : 'الاختيار والتعليق',
+      desc: language === 'en' 
+        ? 'We select premium, fatty herring imported from sustainable Atlantic fisheries. The fish are salted naturally and carefully arranged on stainless steel racks in a clean, temperature-controlled environment.'
+        : 'نختار أسماك الرنجة الفاخرة المستوردة من مصايد الأطلسي المستدامة. يتم تمليح الأسماك طبيعياً وترتيبها بعناية على رفوف من الفولاذ المقاوم للصدأ في بيئة نظيفة ومراقبة الحرارة.',
       image: imgStage1,
       alt: 'Raw herring arranged on racks'
     },
     {
       num: '2',
-      title: 'Natural Beechwood Smoking / التدخين الطبيعي',
-      desc: 'Racks are placed in smoking chambers. We slowly smoke the herring for hours over natural beechwood and oak chips. This process gives it its golden color and authentic rich aroma without any liquid smoke or chemical additives.',
+      title: language === 'en' ? 'Natural Beechwood Smoking' : 'التدخين الطبيعي',
+      desc: language === 'en'
+        ? 'Racks are placed in smoking chambers. We slowly smoke the herring for hours over natural beechwood and oak chips. This process gives it its golden color and authentic rich aroma without any liquid smoke or chemical additives.'
+        : 'توضع الرفوف في أفران التدخين المخصصة. نقوم بتدخين الرنجة ببطء لساعات فوق رقائق خشب الزان والبلوط الطبيعي. تمنحها هذه العملية لونها الذهبي ورائحتها الغنية دون أي إضافات كيميائية.',
       image: imgStage2,
       alt: 'Hanging herring during smoking process'
     },
     {
       num: '3',
-      title: 'Premium Packing / التعبئة والتغليف',
-      desc: 'Once cooled, the smoked herring is packed under strict hygiene conditions. We offer vacuum packs, sealed zipper pouches, canned preserves, and jars, immediately stored to lock in the fresh flavor.',
+      title: language === 'en' ? 'Premium Packing' : 'التعبئة والتغليف',
+      desc: language === 'en'
+        ? 'Once cooled, the smoked herring is packed under strict hygiene conditions. We offer vacuum packs, sealed zipper pouches, canned preserves, and jars, immediately stored to lock in the fresh flavor.'
+        : 'بمجرد تبريد الرنجة المدخنة، يتم تعبئتها تحت ظروف صحية صارمة للغاية. نوفر تغليفاً حرارياً، أظرفاً بسحاب، معلبات، وبرطمانات، تُخزن فوراً للحفاظ على النكهة الطازجة.',
       image: imgStage3,
       alt: 'Finished SEED EL BALAD boxes and packages'
     },
     {
       num: '4',
-      title: 'Gourmet Serving / التقديم والطهي',
-      desc: 'The final product is ready to eat, featuring a rich taste, perfect oiliness, and high nutritional value. Best served with lemon slices, tahini, onions, and fresh bread.',
+      title: language === 'en' ? 'Gourmet Serving' : 'التقديم والطهي',
+      desc: language === 'en'
+        ? 'The final product is ready to eat, featuring a rich taste, perfect oiliness, and high nutritional value. Best served with lemon slices, tahini, onions, and fresh bread.'
+        : 'المنتج النهائي جاهز تماماً للأكل، ويتميز بطعم غني ودسم مثالي وقيمة غذائية عالية. يقدم مع شرائح الليمون، الطحينة، البصل، والخبز الطازج.',
       image: imgStage4,
       alt: 'Plated smoked herring fillets'
     }
@@ -48,8 +59,8 @@ const SeedElBaladProductionProcess = () => {
     <section className="seed-process-section" id="seed-process-timeline">
       <div className="container">
         <div className="text-center mb-5">
-          <span className="text-uppercase tracking-wider fw-bold text-muted" style={{ fontSize: '14px', letterSpacing: '2px' }}>How We Do It</span>
-          <h2 className="fw-bold mt-2" style={{ fontSize: '36px' }}>SEED EL BALAD Production Journey</h2>
+          <span className="text-uppercase tracking-wider fw-bold text-muted" style={{ fontSize: '14px', letterSpacing: '2px' }}>{language === 'en' ? 'How We Do It' : 'كيف نقوم بذلك'}</span>
+          <h2 className="fw-bold mt-2" style={{ fontSize: '36px' }}>{language === 'en' ? 'SEED EL BALAD Production Journey' : 'رحلة إنتاج سيد البلد SEED EL BALAD'}</h2>
           <div className="mx-auto bg-primary mt-3" style={{ width: '60px', height: '4px', borderRadius: '2px' }}></div>
         </div>
         

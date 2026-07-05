@@ -1,5 +1,4 @@
 import React from 'react'
-
 import BlueWave from '../Shared/BlueWave'
 import groubIcon from '../../assets/images/icons/Group.svg'
 import starIcon from '../../assets/images/icons/Vector.svg'
@@ -7,58 +6,55 @@ import checkStarIcon from '../../assets/images/icons/material-symbols_star.svg'
 import supportIcon from '../../assets/images/icons/pepicons-pop_checkmark-filled.svg'
 import FeatureItem from './Features/FeatureItem'
 import SectionHeading from '../Shared/SectionHeading'
+import { useLanguage } from '../../context/LanguageContext';
 
 const Features = () => {
+  const { t } = useLanguage()
+
   const features = [
     {
       icon: groubIcon,
-      title: 'Fast Delivery',
-      description: 'Efficient logistics and cold chain management'
+      title: t('fastDelivery'),
+      description: t('fastDeliveryDesc')
     },
     {
       icon: starIcon,
-      title: 'Permium Quality',
-      description: 'Sourced from the best suppliers worldwide'
+      title: t('premiumQuality'),
+      description: t('premiumQualityDesc')
     },
     {
       icon: checkStarIcon,
-      title: 'Quality Assurance',
-      description: 'Rigorous quality control at every step'
+      title: t('qualityAssurance'),
+      description: t('qualityAssuranceDesc')
     },
     {
       icon: supportIcon,
-      title: 'Expert Support',
-      description: 'Dedicated team for your business needs'
+      title: t('expertSupport'),
+      description: t('expertSupportDesc')
     }
   ]
+
   return (
     <>
       <BlueWave/>
       <div className='pb-4 px-0 m-0 bg-highlight pt-5 pt-md-0'>
         <div className='container'>
           <SectionHeading
-            hint={'Our Features'}
-            title={'Quality is Our First Priority'}
+            hint={t('ourFeatures')}
+            title={t('featuresTitle')}
           />
           <div className='row d-flex justify-content-between py-5'>
             {
               features.map((feature , index) => (
-                <div className='col-xl-3 col-lg-4 col-md-6 col-sm-12'>
-                  <FeatureItem key={index} icon={feature.icon} title={feature.title} description={feature.description} />
+                <div className='col-xl-3 col-lg-4 col-md-6 col-sm-12' key={index}>
+                  <FeatureItem icon={feature.icon} title={feature.title} description={feature.description} />
                 </div>
               ))
             }
           </div>
-          {/* <div className='d-flex justify-content-center'>
-            <button className='outlined-primary-button'>
-              View all
-            </button>
-          </div> */}
         </div>
       </div>
-
     </>
-
   )
 }
 

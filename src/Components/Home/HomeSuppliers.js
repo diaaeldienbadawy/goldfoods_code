@@ -4,16 +4,18 @@ import item1 from '../../assets/images/frigorificos-tunidos4 2.png'
 import item2 from '../../assets/images/nav-logo 3 2.png'
 import item3 from '../../assets/images/logo 1 2.png'
 import item4 from '../../assets/images/ZWAN-VAN-DER 2 2.png'
+import { useLanguage } from '../../context/LanguageContext';
 
 const HomeSuppliers = () => {
-
+    const { t } = useLanguage()
     const items = [item1 , item2 , item3 , item4]
+
   return (
     <div className='container'>
         <div className='pt-3'>
             <SectionHeading
-                hint={'Trusted Partners'}
-                title={'Our Suppliers'}
+                hint={t('globalNetwork')}
+                title={t('trustedPartners')}
             />
             <div className='row d-flex justify-content-center m-0 py-5'>
                 {

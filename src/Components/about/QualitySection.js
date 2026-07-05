@@ -2,8 +2,11 @@ import React from 'react'
 import bgImage from '../../assets/images/Vector-288.png'
 import checkImage from '../../assets/images/icons/check-mark.png'
 import sectionImage from '../../assets/images/Group-432.png'
+import { useLanguage } from '../../context/LanguageContext';
 
 const QualitySection = () => {
+  const { language, t } = useLanguage()
+
   return (
     <div className='py-5 mt-5' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover' , backgroundRepeat: 'no-repeat' , backgroundPositionX: 'start' }}>
       <div className='container'>
@@ -20,15 +23,24 @@ const QualitySection = () => {
 
                     </div>
                     <h3>
-                        Our Feature
+                        {t('ourFeatures')}
                     </h3>
                     <h2 className='fw-bold' style={{ fontSize: '32px' }}>
-                        Quality is Our First Priority
+                        {t('featuresTitle')}
                     </h2>
                     <div className='d-flex flex-column justify-content-center'>
-                        <Item text={'At Gold Foods, we’re more than importers — we’re caretakers of trust, ensuring every shipment meets our standards and our customers’ expectations.'}/>
-                        <Item text={'From supplier selection to delivery, we operate with pride and passion — because at Gold Foods, excellence is not optional.'}/>
-                        <Item text={'All imported goods adhere to food safety regulations and quality assurance protocols for hassle-free distribution.'}/>
+                        <Item text={language === 'en' 
+                          ? 'At Gold Foods, we’re more than importers — we’re caretakers of trust, ensuring every shipment meets our standards and our customers’ expectations.'
+                          : 'في جولد فودز، نحن أكثر من مجرد مستوردين؛ نحن حماة الثقة، ونضمن أن تلبي كل شحنة معاييرنا وتوقعات عملائنا.'
+                        }/>
+                        <Item text={language === 'en' 
+                          ? 'From supplier selection to delivery, we operate with pride and passion — because at Gold Foods, excellence is not optional.'
+                          : 'من اختيار الموردين إلى التوصيل، نعمل بشغف وفخر لأن التميز في جولد فودز ليس خياراً بل هو التزامنا الأساسي.'
+                        }/>
+                        <Item text={language === 'en' 
+                          ? 'All imported goods adhere to food safety regulations and quality assurance protocols for hassle-free distribution.'
+                          : 'تلتزم جميع البضائع المستوردة بلوائح سلامة الغذاء وبروتوكولات ضمان الجودة لتوزيع آمن وسلس.'
+                        }/>
                     </div>
                 </div>
             </div>
