@@ -16,7 +16,7 @@ const Footer = () => {
   const { t } = useLanguage()
 
   return (
-    <div className='footer-container bg-highlight py-2'>
+    <div className='footer-container py-5'>
       <div className='container'>
         <div className='footer'> 
           <div className='row justify-content-start py-3'> 
@@ -29,11 +29,11 @@ const Footer = () => {
               <div className='f-body-text px-3'>
                 {t('footerDesc')}
               </div>
-              <div className='d-flex justify-content-start m-2 pt-2'>
-                <img src={facebookIcon} className='m-2' alt="My Icon" />
-                <img src={twitterIcon} className='m-2' alt="My Icon" />
-                <img src={instagramIcon} className='m-2' alt="My Icon" />
-                <img src={linkedinIcon} className='m-2' alt="My Icon" />
+              <div className='d-flex justify-content-start m-2 pt-2 social-icons'>
+                <img src={facebookIcon} className='m-2' alt="Facebook" />
+                <img src={twitterIcon} className='m-2' alt="Twitter" />
+                <img src={instagramIcon} className='m-2' alt="Instagram" />
+                <img src={linkedinIcon} className='m-2' alt="LinkedIn" />
               </div>
             </div>
             <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-5'>

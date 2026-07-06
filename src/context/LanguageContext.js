@@ -32,7 +32,7 @@ const translations = {
     
     // Seed El Balad Section
     subBrand: "Premium Sub-Brand",
-    brandTitle: "سيد البلد SEED EL BALAD",
+    brandTitle: "SEED EL BALAD",
     authenticEgyptianHerring: "Authentic Egyptian Smoked Herring",
     brandStory: "Our flagship brand, SEED EL BALAD, represents the pinnacle of smoked herring craftsmanship. Sourced from the cold, clean waters of the Atlantic, our herring is processed daily at the Gold Foods factory using traditional salting techniques and slowly smoked over premium, chemical-free oak and beechwood. This ensures a rich, authentic flavor profile and a tender texture that Egyptians have loved for generations.",
     originalQuality: "Original Quality",

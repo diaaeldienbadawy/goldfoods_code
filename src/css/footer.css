@@ -1,10 +1,104 @@
-.footer{
-    padding: 16px 0px;
+.footer-container {
+    background-color: #0d1520 !important;
+    color: #a0aec0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footer-icon{
-    width: 22px !important;
-    height: 18px;
+.footer {
+    padding: 40px 0px 20px 0px;
+}
+
+.footer-container .logo {
+    height: 50px;
+    transform: scale(2.2);
+    transform-origin: left center;
+    cursor: pointer;
+}
+
+/* RTL layout adjustment for logo scale-origin */
+[dir="rtl"] .footer-container .logo {
+    transform-origin: right center;
+}
+
+.footer-container .f-footer-text-bold {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-container .f-footer-text-bold::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+[dir="rtl"] .footer-container .f-footer-text-bold::after {
+    left: auto;
+    right: 0;
+}
+
+.footer-container .f-body-text {
+    color: #a0aec0 !important;
+    line-height: 1.8;
+}
+
+.footer-container .f-phone-number {
+    color: #cbd5e0 !important;
+    transition: color 0.3s ease;
+}
+
+.footer-container .f-phone-number:hover {
+    color: var(--primary-color) !important;
+}
+
+.footer-container .footer-icon {
+    width: 28px !important;
+    height: 28px !important;
     border-radius: 50%;
-    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(212, 175, 55, 0.15) !important;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+.footer-container .c-pointer:hover .footer-icon {
+    background-color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.footer-container .social-icons img {
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.footer-container .social-icons img:hover {
+    opacity: 1;
+    background: var(--primary-color);
+    transform: translateY(-3px);
+    filter: brightness(0) invert(1);
+}
+
+.footer-container .branch-text {
+    color: #718096 !important;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    text-align: center;
+    padding-top: 20px !important;
+    margin-top: 20px;
 }
