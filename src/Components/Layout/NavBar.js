@@ -26,31 +26,16 @@ const NavBar = () => {
                 <li className={activeLink.startsWith('/product') ? 'primary-color' : ''} onClick={() => nav('/product')}>{t('product')}</li>
                 <li className={activeLink === '/about-us' ? 'primary-color' : ''} onClick={() => nav('/about-us') }>{t('aboutUs')}</li>
                 <li className={activeLink === '/contact-us' ? 'primary-color' : ''} onClick={() => nav('/contact-us') }>{t('contact')}</li>
-                <li className="lang-switcher-li" style={{ padding: '0 10px' }}>
-                  <button 
-                    onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
-                    style={{
-                      cursor: 'pointer',
-                      fontWeight: '700',
-                      color: 'var(--primary-color)',
-                      backgroundColor: 'rgba(212, 175, 55, 0.08)',
-                      padding: '6px 15px',
-                      borderRadius: '50px',
-                      border: '1px solid rgba(212, 175, 55, 0.2)',
-                      transition: 'all 0.3s ease',
-                      fontFamily: 'inherit'
-                    }}
-                    onMouseOver={(e) => {
-                      e.target.style.backgroundColor = 'var(--primary-color)';
-                      e.target.style.color = '#fff';
-                    }}
-                    onMouseOut={(e) => {
-                      e.target.style.backgroundColor = 'rgba(212, 175, 55, 0.08)';
-                      e.target.style.color = 'var(--primary-color)';
-                    }}
-                  >
-                    {language === 'en' ? 'العربية' : 'EN'}
-                  </button>
+                <li 
+                  className="primary-color" 
+                  onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
+                  style={{ 
+                    fontWeight: '700', 
+                    cursor: 'pointer',
+                    padding: '0 5px'
+                  }}
+                >
+                  {language === 'en' ? 'العربية' : 'EN'}
                 </li>
               </ul>
             </div>

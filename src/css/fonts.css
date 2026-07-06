@@ -134,6 +134,6 @@ h3{
 }
 
 /* Global RTL font family override for Cairo */
-[dir="rtl"], [dir="rtl"] * {
+[dir="rtl"], [dir="rtl"] *:not(.material-symbols-outlined) {
     font-family: 'Cairo', 'Open Sans', sans-serif !important;
 }

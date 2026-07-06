@@ -53,15 +53,12 @@
     z-index: 3;
 }
 
-/* Content wrapper & alignments */
 .hero-content-container {
     position: relative;
     height: 100%;
     z-index: 4;
     display: flex;
     align-items: center;
-    direction: ltr; /* English-first alignment */
-    text-align: left;
 }
 
 .hero-slide-text {
