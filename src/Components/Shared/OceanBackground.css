@@ -1,0 +1,80 @@
+.ocean-bg-effects-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Bubbles Animation */
+.bg-bubble {
+  position: absolute;
+  bottom: -20px;
+  border-radius: 50%;
+  background: rgba(40, 82, 122, 0.03);
+  border: 1px solid rgba(40, 82, 122, 0.08);
+  animation: floatUp infinite linear;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-105vh) translateX(30px);
+    opacity: 0;
+  }
+}
+
+/* Fishes Animation */
+.bg-fish {
+  position: absolute;
+  opacity: 0.035; /* Subtle background visibility */
+  color: var(--secondary-color);
+  pointer-events: none;
+}
+
+.bg-fish.ltr {
+  left: -120px;
+  animation: swimRight infinite linear;
+}
+
+.bg-fish.rtl {
+  right: -120px;
+  transform: scaleX(-1);
+  animation: swimLeft infinite linear;
+}
+
+@keyframes swimRight {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(55vw) translateY(40px);
+  }
+  100% {
+    transform: translateX(115vw) translateY(0);
+  }
+}
+
+@keyframes swimLeft {
+  0% {
+    transform: scaleX(-1) translateX(0) translateY(0);
+  }
+  50% {
+    transform: scaleX(-1) translateX(55vw) translateY(-40px);
+  }
+  100% {
+    transform: scaleX(-1) translateX(115vw) translateY(0);
+  }
+}

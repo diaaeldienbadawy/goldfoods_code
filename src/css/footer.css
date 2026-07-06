@@ -1,11 +1,11 @@
 .footer-container {
-    background-color: #0d1520 !important;
-    color: #a0aec0 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: #ffffff !important;
+    color: var(--body-text) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .footer {
-    padding: 40px 0px 20px 0px;
+    padding: 50px 0px 20px 0px;
 }
 
 .footer-container .logo {
@@ -21,7 +21,7 @@
 }
 
 .footer-container .f-footer-text-bold {
-    color: #ffffff !important;
+    color: var(--secondary-color) !important;
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 20px;
@@ -45,17 +45,18 @@
 }
 
 .footer-container .f-body-text {
-    color: #a0aec0 !important;
+    color: var(--body-text) !important;
     line-height: 1.8;
 }
 
 .footer-container .f-phone-number {
-    color: #cbd5e0 !important;
-    transition: color 0.3s ease;
+    color: var(--body-text) !important;
+    transition: all 0.3s ease;
 }
 
 .footer-container .f-phone-number:hover {
     color: var(--primary-color) !important;
+    padding-inline-start: 3px;
 }
 
 .footer-container .footer-icon {
@@ -65,8 +66,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(212, 175, 55, 0.15) !important;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background-color: rgba(212, 175, 55, 0.1) !important;
+    border: 1px solid rgba(212, 175, 55, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -76,10 +77,10 @@
 }
 
 .footer-container .social-icons img {
-    opacity: 0.7;
+    opacity: 0.8;
     transition: all 0.3s ease;
     cursor: pointer;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(40, 82, 122, 0.05);
     padding: 10px;
     border-radius: 50%;
     width: 40px;
@@ -94,9 +95,9 @@
 }
 
 .footer-container .branch-text {
-    color: #718096 !important;
+    color: var(--branch-text) !important;
     font-size: 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
     width: 100%;
     text-align: center;
     padding-top: 20px !important;
