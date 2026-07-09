@@ -2,25 +2,46 @@ import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom"
 
 export const useNav = () => {
-    const nav = useNavigate()
-    const location = useLocation()
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const [activeLink, setActiveLink] = useState(location.pathname);
     const [isOpen, setIsOpen] = useState(false);
 
-    const scrollTop = () => {
-        if(activeLink.startsWith('/product')){
-            if(activeLink === '/product') document.getElementById('app').scrollTo({top: 0, behavior: 'smooth'})
-            else document.getElementById('app').scrollTo({top: document.getElementById('categorys-bar')?.offsetTop, behavior: 'smooth'})
-        } 
-        else document.getElementById('app').scrollTo({top: 0, behavior: 'smooth'})
-    }
+    const scrollTop = (path = location.pathname, smooth = false) => {
+        const scrollConfig = { top: 0, behavior: smooth ? 'smooth' : 'auto' };
+        
+        // Scroll global viewport
+        window.scrollTo(scrollConfig);
+        
+        // Scroll app container
+        const appEl = document.getElementById('app');
+        if (appEl) {
+            if (path.startsWith('/product') && path !== '/product') {
+                const catBar = document.getElementById('categorys-bar');
+                appEl.scrollTo({ 
+                    top: catBar ? catBar.offsetTop : 0, 
+                    behavior: smooth ? 'smooth' : 'auto' 
+                });
+            } else {
+                appEl.scrollTo(scrollConfig);
+            }
+        }
+    };
 
-    useEffect(()=>{
-        setActiveLink(location.pathname)
-        setIsOpen(false)
-        scrollTop()
-    },[location.pathname])
+    const nav = (path) => {
+        if (location.pathname === path) {
+            scrollTop(path, true);
+        } else {
+            navigate(path);
+        }
+    };
+
+    useEffect(() => {
+        setActiveLink(location.pathname);
+        setIsOpen(false);
+        scrollTop(location.pathname, false);
+    }, [location.pathname]);
 
     return {
         activeLink,
@@ -30,5 +51,5 @@ export const useNav = () => {
         isOpen,
         setIsOpen,
         scrollTop
-    }
+    };
 }
