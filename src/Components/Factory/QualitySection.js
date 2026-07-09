@@ -20,19 +20,10 @@ const QualitySection = () => {
         </div>
 
       <div className='container position-relative'>
-        <div className='row flex-column-reverse flex-sm-row'>
-            <div className='col-lg-6 '>
+        <div className='row flex-column-reverse flex-sm-row align-items-center'>
+            <div className='col-lg-6'>
                 <div style={{ maxWidth:'480px' }}>
-                    <div className='py-md-5'>
-
-                    </div>
-                    <div className='py-4 py-md-5'>
-
-                    </div>
-                    <div className='py-md-5'>
-
-                    </div>
-                    <h3 className=' py-md-3'>
+                    <h3 className='py-md-3'>
                         {t('factory')}
                     </h3>
                     <h2 className='fw-bold py-md-3' style={{ fontSize: '32px' }}>
