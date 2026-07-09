@@ -81,8 +81,8 @@ const ContactBox = () => {
               <div className={language === 'ar' ? 'pe-3' : 'ps-3'}>
                 <h5 className='fw-bold mb-1' style={{ color: 'var(--secondary-color)' }}>{t('emailUs')} & {t('callUs')}</h5>
                 <p className='mb-1' style={{ fontSize: '14px' }}>
-                  <a href={`mailto:Ceo@goldfoods.net`} className='text-muted text-decoration-none' style={{ transition: 'color 0.2s' }}>
-                    Ceo@goldfoods.net
+                  <a href={`mailto:Ceo@gf-egypt.com`} className='text-muted text-decoration-none' style={{ transition: 'color 0.2s' }}>
+                    Ceo@gf-egypt.com
                   </a>
                 </p>
                 <p className='mb-0' style={{ fontSize: '14px' }}>
@@ -101,8 +101,8 @@ const ContactBox = () => {
               className='p-4 p-md-5 bg-white shadow-sm h-100'
               style={{ borderRadius: '24px', border: '1px solid rgba(0,0,0,0.03)' }}
             >
-              <form action="https://formsubmit.co/Ceo@goldfoods.net" method='POST' className='m-0'>
-                <input type="hidden" name="_next" value={'https://goldfoods.net'}/>
+              <form action="https://formsubmit.co/Ceo@gf-egypt.com" method='POST' className='m-0'>
+                <input type="hidden" name="_next" value={'https://goldfoods-phi.vercel.app'}/>
                 <input type="text" name="_honey" style={{ display: 'none' }}/>
 
                 <div className='row g-4'>

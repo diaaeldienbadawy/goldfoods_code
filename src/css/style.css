@@ -9,6 +9,7 @@
 @import "./product/product.css";
 @import "./Home/seed-el-balad.css";
 @import "./shared/seed-el-balad-factory.css";
+@import "./shared/scrolling-gallery.css";
 
 html{
     scroll-behavior: smooth;

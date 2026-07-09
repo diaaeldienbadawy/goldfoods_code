@@ -2,7 +2,6 @@ import React from 'react'
 import bgImage from '../../assets/images/Vector-289-1.png'
 import bgImage2 from '../../assets/images/Vector-289.png'
 import checkImage from '../../assets/images/icons/check-mark.png'
-import sectionImage from '../../assets/images/Group-433.png'
 import WhyChoseUs from './WhyChoseUs'
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -77,9 +76,24 @@ const QualitySection = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-lg-6'>
-                <div className='d-flex justify-content-center m-auto'>
-                    <img src={sectionImage} className='w-100' alt="My Icon" />
+            <div className='col-lg-6 mt-4 mt-lg-0'>
+                <div className='scrolling-factory-gallery'>
+                    <div className='scrolling-gallery-track'>
+                        {[
+                          '/factory-quality.jpg.jpeg',
+                          '/factory-quality2.jpg.jpeg',
+                          '/factory-quality3.jpg.jpeg',
+                          '/factory-quality4jpg.jpeg',
+                          '/factory-quality.jpg.jpeg',
+                          '/factory-quality2.jpg.jpeg',
+                          '/factory-quality3.jpg.jpeg',
+                          '/factory-quality4jpg.jpeg'
+                        ].map((src, i) => (
+                            <div key={i} className='scrolling-gallery-item'>
+                                <img src={src} alt={`Factory Production ${i + 1}`} />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,18 +1,44 @@
-import React from 'react'
-import SecImage from '../../assets/images/pexels-javierbalseiro-16664053 1.png'
+import React, { useEffect, useState } from 'react'
 import checkImage from '../../assets/images/icons/check-mark.png'
 import { useLanguage } from '../../context/LanguageContext';
 
 const WhyChoseUs = () => {
   const { language, t } = useLanguage()
 
+  const whyUsImages = [
+    '/factory-why-us1.jpg.jpeg',
+    '/factory-why-us2.jpg.jpeg',
+    '/factory-why-us3.jpg.jpeg'
+  ];
+
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveImageIndex((prevIndex) => (prevIndex + 1) % whyUsImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, [whyUsImages.length]);
+
   return (
-    <div className='py-md-5 mt-5 position-relative' style={{ backgroundImage: `url(${SecImage})`, backgroundSize: '' , backgroundRepeat: 'repeat' , backgroundPositionX: 'start' }}>
+    <div className='py-md-5 mt-5 position-relative' style={{ backgroundColor: 'var(--highlight-color)', borderRadius: '30px' }}>
       <div className='container'>
-        <div className='row py-5'>
-            <div className='col-md-6'>
-                <div className='d-flex m-auto ratio ratio-16x9 rounded-5 overflow-hidden' style={{ maxWidth: '600px' }}>
-                    <img src={SecImage} className='w-100 h-100' alt="My Icon" />
+        <div className='row py-5 align-items-center'>
+            <div className='col-md-6 mb-4 mb-md-0'>
+                <div className='m-auto ratio ratio-16x9 rounded-5 overflow-hidden position-relative shadow-lg' style={{ maxWidth: '600px', border: '2px solid rgba(212, 175, 55, 0.25)' }}>
+                    {whyUsImages.map((src, i) => (
+                      <img 
+                        key={i}
+                        src={src} 
+                        className='w-100 h-100 position-absolute top-0 start-0 object-fit-cover' 
+                        style={{ 
+                          opacity: i === activeImageIndex ? 1 : 0, 
+                          transition: 'opacity 1.2s ease-in-out',
+                          zIndex: i === activeImageIndex ? 1 : 0
+                        }} 
+                        alt={`Why Choose Us ${i + 1}`} 
+                      />
+                    ))}
                 </div>
             </div>
             <div className='col-md-6 px-md-5'>

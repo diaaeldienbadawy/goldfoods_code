@@ -40,7 +40,7 @@ const Footer = () => {
               <FooterMenu
                 title={t('contactUs')}
                 items={[
-                  {icon: webIcon , title: 'Ceo@goldfoods.net', link: 'mailto:Ceo@goldfoods.net' , email: true},
+                  {icon: webIcon , title: 'Ceo@gf-egypt.com', link: 'mailto:Ceo@gf-egypt.com' , email: true},
                   {icon: phoneIcon , title: t('phoneNum'), link: `tel:${t('phoneNum')}` , phone: true},
                   {
                     icon: locationIcon ,

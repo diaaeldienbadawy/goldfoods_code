@@ -1,0 +1,88 @@
+/* Scrolling Factory Gallery Container */
+.scrolling-factory-gallery {
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 24px;
+    border: 2px solid rgba(212, 175, 55, 0.25);
+    background: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Linear vertical scrolling track */
+.scrolling-gallery-track {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    animation: scrollVertical 22s linear infinite;
+}
+
+/* Pause scroll animation on hover to allow detailed viewing! */
+.scrolling-factory-gallery:hover .scrolling-gallery-track {
+    animation-play-state: paused;
+}
+
+/* Individual slide item */
+.scrolling-gallery-item {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+    height: 230px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.scrolling-gallery-item:hover {
+    transform: scale(1.02);
+    border-color: var(--primary-color);
+}
+
+.scrolling-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Vertical Keyframes */
+@keyframes scrollVertical {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(calc(-50% - 10px));
+    }
+}
+
+/* Fade effects at the top and bottom of the container to look extremely premium! */
+.scrolling-factory-gallery::before,
+.scrolling-factory-gallery::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.scrolling-factory-gallery::before {
+    top: 0;
+    background: linear-gradient(to bottom, #ffffff, transparent);
+}
+
+.scrolling-factory-gallery::after {
+    bottom: 0;
+    background: linear-gradient(to top, #ffffff, transparent);
+}
+
+@media (max-width: 991px) {
+    .scrolling-factory-gallery {
+        height: 380px;
+    }
+    .scrolling-gallery-item {
+        height: 180px;
+    }
+}
