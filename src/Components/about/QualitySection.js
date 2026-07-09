@@ -1,7 +1,6 @@
 import React from 'react'
 import bgImage from '../../assets/images/Vector-288.png'
 import checkImage from '../../assets/images/icons/check-mark.png'
-import sectionImage from '../../assets/images/Group-432.png'
 import { useLanguage } from '../../context/LanguageContext';
 
 const QualitySection = () => {
@@ -10,7 +9,7 @@ const QualitySection = () => {
   return (
     <div className='py-5 mt-5' style={{ backgroundImage: `url(${bgImage})`, backgroundSize: 'cover' , backgroundRepeat: 'no-repeat' , backgroundPositionX: 'start' }}>
       <div className='container'>
-        <div className='row flex-column-reverse flex-md-row'>
+        <div className='row flex-column-reverse flex-md-row align-items-center'>
             <div className='col-lg-6 pt-5'>
                 <div style={{ maxWidth:'480px' }}>
                     <div className='py-md-5'>
@@ -44,9 +43,14 @@ const QualitySection = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-lg-6'>
-                <div className='h-100 d-flex justify-content-center'>
-                    <img src={sectionImage} className='w-100 h-100' alt="My Icon" />
+            <div className='col-lg-6 mt-4 mt-lg-0'>
+                <div className='h-100 d-flex justify-content-center align-items-center'>
+                    <img 
+                      src="/about-quality.jpg" 
+                      className='w-100 rounded-5 shadow-lg' 
+                      style={{ border: '2px solid rgba(212, 175, 55, 0.25)', objectFit: 'cover' }} 
+                      alt="Gold Foods Factory and Branded Trucks" 
+                    />
                 </div>
             </div>
         </div>

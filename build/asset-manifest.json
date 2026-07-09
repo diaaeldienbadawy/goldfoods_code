@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.75468257.css",
-    "main.js": "/static/js/main.2a098e72.js",
+    "main.js": "/static/js/main.67a5cb38.js",
     "static/media/productsPageImage.png": "/static/media/productsPageImage.b9297b189d848a7c330d.png",
     "static/media/Group-431.png": "/static/media/Group-431.328790836e7a33576b26.png",
     "static/media/logo.png": "/static/media/logo.2f4688e21bd154c0ddeb.png",
-    "static/media/Group-432.png": "/static/media/Group-432.d9764a64533e42dcae4d.png",
     "static/media/img_2.jpeg": "/static/media/img_2.903c333e64cbcaf20756.jpeg",
     "static/media/img_4.jpeg": "/static/media/img_4.1aae111d3e4448a0106b.jpeg",
     "static/media/img_6.jpeg": "/static/media/img_6.94f7305ab38689e5f193.jpeg",
@@ -61,10 +60,10 @@
     "static/media/Vector.svg": "/static/media/Vector.1f91e8e58b2cc7bce6282ce3e831920c.svg",
     "static/media/small-star.svg": "/static/media/small-star.b13b1a0b97a9b9e73ce93e016f324267.svg",
     "main.75468257.css.map": "/static/css/main.75468257.css.map",
-    "main.2a098e72.js.map": "/static/js/main.2a098e72.js.map"
+    "main.67a5cb38.js.map": "/static/js/main.67a5cb38.js.map"
   },
   "entrypoints": [
     "static/css/main.75468257.css",
-    "static/js/main.2a098e72.js"
+    "static/js/main.67a5cb38.js"
   ]
 }
