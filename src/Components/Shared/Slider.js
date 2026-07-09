@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const Slider = () => {
     const videos = [
-        '/factory-video1.mp4',
+        '/factory-video3.mp4',
         '/factory-video2.mp4',
-        '/factory-video3.mp4'
+        '/factory-video1.mp4'
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
