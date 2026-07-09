@@ -1,126 +1,62 @@
-import React, { useEffect, useState } from 'react'
-import Slider1 from '../../assets/images/Slider/slider1.png'
-import Slider2 from '../../assets/images/Slider/slider2.png'
-import Slider3 from '../../assets/images/Slider/slider3.png'
-import Slider4 from '../../assets/images/Slider/slider4.png'
-import Slider5 from '../../assets/images/Slider/slider5.png'
-import Slider6 from '../../assets/images/Slider/slider6.png'
-import Slider7 from '../../assets/images/Slider/slider7.png'
+import React, { useEffect, useRef, useState } from 'react'
 
 const Slider = () => {
-    const images = [Slider1, Slider2, Slider3, Slider4, Slider5, Slider6, Slider7];
-    
-    const [prev , setPrev] = useState({index: null , image: null, fadeOut: false});
-    const [current , setCurrent] = useState({index: 0 , image: images[0], isAuto:true})
+    const videos = [
+        '/factory-video1.mp4',
+        '/factory-video2.mp4',
+        '/factory-video3.mp4'
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const videoRef = useRef(null);
 
     useEffect(() => {
-        let timeout = null
-        if(current.isAuto) {
-            timeout =setTimeout(() => {
-                if(current.isAuto == false) return;
-                setPrev((prev) => ({ ...prev, index: current.index, image: current.image , fadeOut: false }));
-                setCurrent((prev) => ({ ...prev, index: (prev.index + 1) % images.length, image: images[(prev.index + 1) % images.length], isAuto: true }));
-            },3000);
+        if (videoRef.current) {
+            videoRef.current.load();
+            videoRef.current.play().catch(err => {
+                console.log("Autoplay prevented:", err);
+            });
         }
-        else{  setCurrent((prev) => ({ ...prev, isAuto: true }))}
-        return () =>{if(timeout) clearTimeout(timeout)}
-    }, [current]);
+    }, [currentIndex]);
 
-    useEffect(()=>{
-        let timeout = null;
-        if(prev.image !== null && prev.fadeOut == false){
-            timeout = setTimeout(() => {
-                setPrev((prev) => ({ ...prev, fadeOut: true }));
-            },50)
-        }
-        return () =>{if(timeout) clearTimeout(timeout)}
-    },[prev.image])
+    const handleEnded = () => {
+        setCurrentIndex((prev) => (prev + 1) % videos.length);
+    };
 
-    useEffect(()=>{
-        let timeout = null;
-        if(prev.fadeOut == true){
-            timeout = setTimeout(() => {
-                setPrev((prev) => ({ ...prev, image: null , fadeOut: false }));
-            },1000)
-        }
-
-        return () =>{if(timeout) clearTimeout(timeout)}
-    },[prev.fadeOut])
-
-    const handleClick = (index) => {
-        setPrev((prev) => ({ ...prev, index: current.index, image: current.image , fadeOut: false }));
-        setCurrent((prev) => ({ ...prev, index: index, image: images[index], isAuto: false }));      
-    }
+    const handleDotClick = (index) => {
+        setCurrentIndex(index);
+    };
 
     return (
-        <div className='slider-container'>
+        <div className='slider-container shadow-lg' style={{ border: '2px solid rgba(212, 175, 55, 0.2)', backgroundColor: '#0d1b2a' }}>
             <div className='slide'>
-                <img src={current.image} alt="My Icon" />
+                <video
+                    ref={videoRef}
+                    muted
+                    playsInline
+                    autoPlay
+                    onEnded={handleEnded}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                >
+                    <source src={videos[currentIndex]} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            {prev.image != null && (
-                <div className={`slide ${prev.fadeOut ? 'hide' : ''}`}>
-                    <img src={prev.image} alt="My Icon" />
-                </div>
-            )}
-
 
             <div className='dots-container'>
                 {
-                    images.map((image, i) => (
-                        <div className={`dot ${i === current.index ? 'active' : ''}`} key={i} onClick={() =>handleClick(i)}></div>
+                    videos.map((_, i) => (
+                        <div 
+                            className={`dot ${i === currentIndex ? 'active' : ''}`} 
+                            key={i} 
+                            onClick={() => handleDotClick(i)}
+                            style={{ cursor: 'pointer' }}
+                        />
                     ))
                 }
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Slider
-
-
-// const Slider = () => {
-//     const images = [Slider1, Slider2, Slider3, Slider4, Slider5, Slider6, Slider7];
-    
-//     const [index, setIndex] = useState(0);
-//     const [currentImage, setCurrentImage] = useState(images[index]);
-//     const [nextImage, setNextImage] = useState(images[index + 1]);
-//     const [hidding, setHidding] = useState(false);
-
-//     useEffect(() => {
-//         if(hidding){
-//             setTimeout(() => {
-//                 setIndex((prevIndex) => (prevIndex + 1) % images.length);
-//             },2500)
-//         }
-//     },[hidding])
- 
-//     useEffect(() => {
-//         setHidding(false);
-//         setCurrentImage(images[index]);
-//         const ind = (index + 1) % images.length;
-//         setNextImage(images[ind]);
-//         setTimeout(() => {
-//             setHidding(true);
-//         }, 2500);
-//       }, [index]);
-
-//     return (
-//         <div className='slider-container'>
-//             <div className='slide'>
-//                 <img src={nextImage} alt="My Icon" />
-//             </div>
-//             <div className={`slide ${hidding ? 'hide' : ''}`}>
-//                 <img src={currentImage} alt="My Icon" />
-//             </div>
-//             <div className='dots-container'>
-//                 {
-//                     images.map((image, i) => (
-//                         <div className={`dot ${i === index ? 'active' : ''}`} key={i} onClick={() => setIndex(i)}></div>
-//                     ))
-//                 }
-//             </div>
-//         </div>
-//     )
-// }
-
-// export default Slider
+export default Slider;
