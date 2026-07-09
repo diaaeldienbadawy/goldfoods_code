@@ -3,6 +3,7 @@ import bgImage from '../../assets/images/Vector-289-1.png'
 import bgImage2 from '../../assets/images/Vector-289.png'
 import checkImage from '../../assets/images/icons/check-mark.png'
 import WhyChoseUs from './WhyChoseUs'
+import VerticalFocusSlider from '../Shared/VerticalFocusSlider'
 import { useLanguage } from '../../context/LanguageContext';
 
 const QualitySection = () => {
@@ -76,25 +77,15 @@ const QualitySection = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-lg-6 mt-4 mt-lg-0'>
-                <div className='scrolling-factory-gallery'>
-                    <div className='scrolling-gallery-track'>
-                        {[
-                          '/factory-quality.jpg.jpeg',
-                          '/factory-quality2.jpg.jpeg',
-                          '/factory-quality3.jpg.jpeg',
-                          '/factory-quality4jpg.jpeg',
-                          '/factory-quality.jpg.jpeg',
-                          '/factory-quality2.jpg.jpeg',
-                          '/factory-quality3.jpg.jpeg',
-                          '/factory-quality4jpg.jpeg'
-                        ].map((src, i) => (
-                            <div key={i} className='scrolling-gallery-item'>
-                                <img src={src} alt={`Factory Production ${i + 1}`} />
-                            </div>
-                        ))}
-                    </div>
-                </div>
+            <div className='col-lg-6 mt-4 mt-lg-0 d-flex align-items-center justify-content-center'>
+                <VerticalFocusSlider 
+                  images={[
+                    '/factory-quality.jpg.jpeg',
+                    '/factory-quality2.jpg.jpeg',
+                    '/factory-quality3.jpg.jpeg',
+                    '/factory-quality4jpg.jpeg'
+                  ]}
+                />
             </div>
         </div>
       </div>
