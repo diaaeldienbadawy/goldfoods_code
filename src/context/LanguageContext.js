@@ -125,8 +125,15 @@ const translations = {
     officeDetails: "Gold tower, Plot No. 39, North Dar Misr, 15th of May City, Cairo, Egypt",
     factoryDetails: "Madinah Monawarah Industrial Zone Plot No. C/197 Belbeis - Al Sharqia Governorate",
 
-    // General
-    allProducts: "All Products"
+    allProducts: "All Products",
+
+    // Parent Company Section
+    parentCompanyTitle: "Our Parent Company",
+    parentCompanySubtitle: "Seed El Balad: Direct from Our Factory to Your Table",
+    parentCompanyDesc1: "Seed El Balad is more than just a brand; it is the proud flagship of Gold Foods. As the sole owner and operator, Gold Foods manages every stage of the journey—from sourcing and expert smoking techniques to quality control and distribution.",
+    parentCompanyDesc2: "By keeping our operations in-house, we eliminate the middleman and deliver factory-fresh quality directly to our customers. When you choose Seed El Balad, you are choosing the direct output of Gold Foods’ commitment to excellence and culinary integrity.",
+    parentLabel: "Parent Company & Factory",
+    brandLabel: "Flagship Premium Brand"
   },
   ar: {
     // NavBar
@@ -250,8 +257,15 @@ const translations = {
     officeDetails: "برج جولد، قطعة رقم 39، شمال دار مصر، مدينة 15 مايو، القاهرة، مصر",
     factoryDetails: "المنطقة الصناعية بمدينة بلبيس، قطعة رقم C/197 - محافظة الشرقية، مصر",
 
-    // General
-    allProducts: "كل المنتجات"
+    allProducts: "كل المنتجات",
+
+    // Parent Company Section
+    parentCompanyTitle: "الشركة الأم",
+    parentCompanySubtitle: "سيد البلد: مباشرة من مصنعنا إلى طاولتك",
+    parentCompanyDesc1: "سيد البلد هي أكثر من مجرد علامة تجارية؛ إنها العلامة الرائدة والفخورة لشركة جولد فودز. بصفتها المالك والمشغل الوحيد، تدير جولد فودز كل مرحلة من مراحل الرحلة - بدءاً من الاستيراد وتقنيات التدخين الاحترافية إلى مراقبة الجودة والتوزيع.",
+    parentCompanyDesc2: "من خلال إبقاء عملياتنا داخل الشركة بالكامل، فإننا نلغي الوسيط ونقدم جودة طازجة مباشرة من المصنع إلى عملائنا. عندما تختار سيد البلد، فإنك تختار الناتج المباشر لالتزام جولد فودز بالتميز والنزاهة الغذائية.",
+    parentLabel: "الشركة الأم والمصنع",
+    brandLabel: "العلامة التجارية الرائدة"
   }
 };
 

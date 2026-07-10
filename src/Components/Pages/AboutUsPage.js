@@ -3,6 +3,7 @@ import PageHeader from '../Shared/PageHeader'
 import PriefSection from '../about/PriefSection'
 import HomeProducts from '../Home/HomeProducts'
 import QualitySection from '../about/QualitySection'
+import ParentCompanySection from '../Shared/ParentCompanySection'
 import HomePartner from '../Home/HomePartner'
 import { useNav } from '../../hocks/layout/useNav'
 import { useLanguage } from '../../context/LanguageContext';
@@ -22,6 +23,7 @@ const AboutUsPage = () => {
         </button>
       </div>
       <QualitySection/>
+      <ParentCompanySection/>
       <HomePartner/>
     </>
   )

@@ -3,6 +3,7 @@ import HeroSection from '../Home/HeroSection'
 import Features from '../Home/Features'
 import HomeProducts from '../Home/HomeProducts'
 import SeedElBaladSection from '../Home/SeedElBaladSection'
+import ParentCompanySection from '../Shared/ParentCompanySection'
 import SeedElBaladProductsShowcase from '../Factory/SeedElBaladProductsShowcase'
 import HomeFactorySlider from '../Home/HomeFactorySlider'
 import HomeSuppliers from '../Home/HomeSuppliers'
@@ -15,6 +16,7 @@ const HomePage = () => {
       <HeroSection/> 
       <Features/>
       <SeedElBaladSection/>
+      <ParentCompanySection/>
       <div className="container py-5">
         <SeedElBaladProductsShowcase/>
       </div>
