@@ -45,7 +45,7 @@ const NavBar = () => {
             > 
               <div className={`phone d-flex ${language === 'en' ? 'ps-md-5' : 'pe-md-5'} f-phone-number`}>
                 <div className="phone-icon bg-primary"><img src={phone} alt="My Icon" /></div>
-                <div className="phone-number f-phone-number ps-md-3 c-pointer" onClick={()=>window.open('tel:+201000461725')}>
+                <div className="phone-number f-phone-number ps-md-3 c-pointer" onClick={()=>window.open(`tel:${t('phoneNum')}`)}>
                   <span dir="ltr">{t('phoneNum')}</span>
                 </div>
               </div>

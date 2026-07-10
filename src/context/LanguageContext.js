@@ -121,8 +121,8 @@ const translations = {
     officeAddress: "Office Address",
     emailUs: "Email Us",
     callUs: "Call Us",
-    phoneNum: "+201000461725",
-    officeDetails: "Gold tower, Plot No. 39, North Dar Misr, 15th of May City, Cairo, Egypt",
+    phoneNum: "+201032033302",
+    officeDetails: "39 Al-Akthar Tamayoz, Gold Tower, 15th of May City, Cairo, Egypt.",
     factoryDetails: "Madinah Monawarah Industrial Zone Plot No. C/197 Belbeis - Al Sharqia Governorate",
 
     allProducts: "All Products",
@@ -253,8 +253,8 @@ const translations = {
     officeAddress: "عنوان المكتب الرئيسي",
     emailUs: "أرسل لنا بريداً إلكترونياً",
     callUs: "اتصل بنا هاتفياً",
-    phoneNum: "+201000461725",
-    officeDetails: "برج جولد، قطعة رقم 39، شمال دار مصر، مدينة 15 مايو، القاهرة، مصر",
+    phoneNum: "+201032033302",
+    officeDetails: "39 الأكثر تميزاً، برج جولد، مدينة 15 مايو، القاهرة، مصر.",
     factoryDetails: "المنطقة الصناعية بمدينة بلبيس، قطعة رقم C/197 - محافظة الشرقية، مصر",
 
     allProducts: "كل المنتجات",
