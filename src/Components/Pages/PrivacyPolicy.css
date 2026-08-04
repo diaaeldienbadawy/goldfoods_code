@@ -1,194 +1,172 @@
-/* Privacy Policy Custom Styles */
-.privacy-page-container {
+/* Clean & Minimalist Privacy Policy Layout */
+.privacy-page-wrapper {
   background-color: var(--highlight-color);
   min-height: 100vh;
 }
 
-/* View Toggle Button Group */
-.view-toggle-btn {
+.privacy-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Base Section Styling */
+.privacy-card-section {
   background: #ffffff;
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  color: var(--secondary-color);
-  padding: 10px 20px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  font-size: 14px;
-}
-
-.view-toggle-btn.active {
-  background: var(--secondary-color);
-  color: #ffffff;
-  border-color: var(--secondary-color);
-}
-
-.view-toggle-btn:hover:not(.active) {
-  background: rgba(212, 175, 55, 0.1);
-  color: var(--secondary-color);
-}
-
-/* Intro Card */
-.intro-card {
-  background: #ffffff;
-  border-radius: 20px;
-  border-left: 5px solid var(--primary-color);
+  border-radius: 24px;
+  border: 1px solid rgba(212, 175, 55, 0.15);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  padding: 40px;
+  margin-bottom: 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-[dir="rtl"] .intro-card {
-  border-left: 0;
-  border-right: 5px solid var(--primary-color);
+.privacy-card-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.06);
 }
 
-/* Visual Grid Cards */
-.privacy-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 25px;
+.section-icon-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.visual-card {
-  background: #ffffff;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 30px;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  height: 100%;
-}
-
-.visual-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.visual-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.15);
-  border-color: rgba(212, 175, 55, 0.3);
-}
-
-.visual-card:hover::after {
-  opacity: 1;
-}
-
-.visual-card .icon-box {
-  width: 55px;
-  height: 55px;
-  border-radius: 14px;
-  background: rgba(212, 175, 55, 0.1);
+.section-icon-header .icon-container {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(212, 175, 55, 0.1);
   color: var(--secondary-color);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-  transition: all 0.3s ease;
 }
 
-.visual-card:hover .icon-box {
-  background: var(--secondary-color);
-  color: #ffffff;
-  transform: scale(1.05);
+.section-icon-header .icon-container span {
+  font-size: 24px;
 }
 
-.visual-card .icon-box span {
-  font-size: 28px;
-}
-
-.visual-card-title {
-  font-size: 18px;
+.section-title-text {
+  font-size: 22px;
   color: var(--secondary-color);
-  margin-bottom: 12px;
+  font-weight: 700;
+  margin-bottom: 0;
 }
 
-.visual-card-desc {
-  font-size: 14px;
+.section-subtitle-text {
+  font-size: 15px;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* Custom Lists & Checklists */
+.custom-privacy-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+[dir="rtl"] .custom-privacy-list {
+  padding-right: 0;
+}
+
+.custom-privacy-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 15px;
   color: var(--body-text);
   line-height: 1.6;
 }
 
-/* Modal details */
-.privacy-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1050;
-  animation: fadeIn 0.3s ease;
+[dir="rtl"] .custom-privacy-list li {
+  padding-left: 0;
+  padding-right: 28px;
 }
 
-.privacy-modal {
+.custom-privacy-list li::before {
+  content: "check_circle";
+  font-family: "Material Symbols Outlined";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--primary-color);
+  font-size: 18px;
+}
+
+[dir="rtl"] .custom-privacy-list li::before {
+  left: auto;
+  right: 0;
+}
+
+/* Grid Layouts for Sections */
+.section-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Callout Box / Cookies block */
+.callout-info-box {
+  background: rgba(212, 175, 55, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+/* Contact Card Section */
+.contact-callout-card {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(212, 175, 55, 0.05) 100%);
+  border: 2px solid rgba(212, 175, 55, 0.25);
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.06);
+}
+
+.contact-badge-title {
+  color: var(--secondary-color);
+  font-size: 24px;
+}
+
+.contact-interactive-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.contact-interactive-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* Header Section */
+.privacy-page-header-intro {
   background: #ffffff;
   border-radius: 24px;
-  width: 90%;
-  max-width: 600px;
-  max-height: 85vh;
-  overflow-y: auto;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(212, 175, 55, 0.2);
-  animation: slideUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  border-left: 5px solid var(--primary-color);
 }
 
-.privacy-modal-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+[dir="rtl"] .privacy-page-header-intro {
+  border-left: 0;
+  border-right: 5px solid var(--primary-color);
 }
 
-.privacy-modal-body {
-  line-height: 1.8;
-  color: var(--body-text);
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .privacy-card-section {
+    padding: 25px;
+  }
+  
+  .section-split-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .section-title-text {
+    font-size: 19px;
+  }
 }
-
-.privacy-modal-body ul {
-  padding-left: 20px;
-}
-
-[dir="rtl"] .privacy-modal-body ul {
-  padding-left: 0;
-  padding-right: 20px;
-}
-
-.privacy-modal-body li {
-  margin-bottom: 8px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Staggered card animation classes */
-.card-animate-in {
-  animation: slideUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) both;
-}
-
-.card-delay-1 { animation-delay: 0.05s; }
-.card-delay-2 { animation-delay: 0.1s; }
-.card-delay-3 { animation-delay: 0.15s; }
-.card-delay-4 { animation-delay: 0.2s; }
-.card-delay-5 { animation-delay: 0.25s; }
-.card-delay-6 { animation-delay: 0.3s; }
-.card-delay-7 { animation-delay: 0.35s; }
-.card-delay-8 { animation-delay: 0.4s; }
-.card-delay-9 { animation-delay: 0.45s; }
-.card-delay-10 { animation-delay: 0.5s; }
-.card-delay-11 { animation-delay: 0.55s; }
