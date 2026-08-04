@@ -69,6 +69,7 @@ const Footer = () => {
                     {title: t('product'), link: '/product'},
                     {title: t('aboutUs'), link: '/about-us'},
                     {title: t('contact'), link: '/contact-us'},
+                    {title: t('privacyPolicy'), link: '/privacy-policy'},
                   ]}
                 />
             </div>

@@ -5,6 +5,7 @@ import ProductPage from '../Pages/ProductPage'
 import FactoryPage from '../Pages/FactoryPage'
 import ContactUsPage from '../Pages/ContactUsPage'
 import AboutUsPage from '../Pages/AboutUsPage'
+import PrivacyPolicyPage from '../Pages/PrivacyPolicyPage'
 
 const PageContent = () => {
   return (
@@ -14,6 +15,7 @@ const PageContent = () => {
       <Route path="/factory" element={<FactoryPage/>} />
       <Route path="/contact-us" element={<ContactUsPage/>} />
       <Route path="/about-us" element={<AboutUsPage/>} />
+      <Route path="/privacy-policy" element={<PrivacyPolicyPage/>} />
     </Routes>
   )
 }

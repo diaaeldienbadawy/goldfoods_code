@@ -126,6 +126,7 @@ const translations = {
     factoryDetails: "Madinah Monawarah Industrial Zone Plot No. C/197 Belbeis - Al Sharqia Governorate",
 
     allProducts: "All Products",
+    privacyPolicy: "Privacy Policy",
 
     // Parent Company Section
     parentCompanyTitle: "Our Parent Company",
@@ -258,6 +259,7 @@ const translations = {
     factoryDetails: "المنطقة الصناعية بمدينة بلبيس، قطعة رقم C/197 - محافظة الشرقية، مصر",
 
     allProducts: "كل المنتجات",
+    privacyPolicy: "سياسة الخصوصية",
 
     // Parent Company Section
     parentCompanyTitle: "الشركة الأم",
