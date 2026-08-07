@@ -1,0 +1,100 @@
+.cookie-consent-banner {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    z-index: 1040;
+    width: 90%;
+    max-width: 950px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    animation: cookieSlideUp 0.6s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+.cookie-icon-wrapper {
+    background-color: var(--primary-color) !important;
+}
+
+.cookie-banner-title {
+    color: var(--secondary-color);
+}
+
+.cookie-banner-text {
+    font-size: 13.5px;
+    max-width: 550px;
+}
+
+/* Custom button states */
+.decline-btn {
+    transition: color 0.2s ease;
+}
+
+.decline-btn:hover {
+    color: #dc3545 !important;
+}
+
+.learn-more-btn {
+    border-color: rgba(212, 175, 55, 0.3) !important;
+    color: var(--secondary-color) !important;
+    transition: all 0.2s ease;
+}
+
+.learn-more-btn:hover {
+    border-color: var(--primary-color) !important;
+    background: rgba(212, 175, 55, 0.05) !important;
+}
+
+.accept-btn {
+    background: var(--secondary-color) !important;
+    color: #ffffff !important;
+    transition: all 0.3s ease;
+}
+
+.accept-btn:hover {
+    background: var(--primary-color) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Stacker alignment helper for RTL */
+.cookie-consent-banner.rtl {
+    direction: rtl;
+}
+
+@keyframes cookieSlideUp {
+    from {
+        transform: translateX(-50%) translateY(120%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mobile responsive layout tweaks */
+@media (max-width: 768px) {
+    .cookie-consent-banner {
+        bottom: 15px;
+        padding: 20px !important;
+        border-radius: 16px !important;
+    }
+    
+    .cookie-consent-banner .d-flex {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    
+    .w-100-mobile {
+        width: 100% !important;
+        justify-content: space-between !important;
+        margin-top: 15px;
+        gap: 10px !important;
+    }
+    
+    .cookie-banner-text {
+        max-width: 100%;
+    }
+}

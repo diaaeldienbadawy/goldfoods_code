@@ -3,6 +3,7 @@ import PageContent from "./Components/Layout/PageContent";
 import NavBar from "./Components/Layout/NavBar";
 import Footer from "./Components/Layout/Footer";
 import OceanBackground from "./Components/Shared/OceanBackground";
+import CookieConsent from "./Components/Shared/CookieConsent";
 import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <PageContent/>
           </div>
           <Footer/>
+          <CookieConsent/>
         </BrowserRouter>
       </div>
     </LanguageProvider>

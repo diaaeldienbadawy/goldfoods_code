@@ -127,6 +127,10 @@ const translations = {
 
     allProducts: "All Products",
     privacyPolicy: "Privacy Policy",
+    cookieMessage: "We use cookies to improve your browsing experience, analyze site traffic, and deliver personalized content.",
+    cookieAccept: "Accept All",
+    cookieDecline: "Decline",
+    cookieReadMore: "Learn More",
 
     // Parent Company Section
     parentCompanyTitle: "Our Parent Company",
@@ -260,6 +264,10 @@ const translations = {
 
     allProducts: "كل المنتجات",
     privacyPolicy: "سياسة الخصوصية",
+    cookieMessage: "نحن نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح الخاصة بك، وتحليل حركة مرور الموقع، وتقديم محتوى مخصص.",
+    cookieAccept: "موافق على الكل",
+    cookieDecline: "رفض",
+    cookieReadMore: "اقرأ المزيد",
 
     // Parent Company Section
     parentCompanyTitle: "الشركة الأم",
