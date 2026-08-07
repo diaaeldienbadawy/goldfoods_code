@@ -26,6 +26,7 @@ const NavBar = () => {
                 <li className={activeLink.startsWith('/product') ? 'primary-color' : ''} onClick={() => nav('/product')}>{t('product')}</li>
                 <li className={activeLink === '/about-us' ? 'primary-color' : ''} onClick={() => nav('/about-us') }>{t('aboutUs')}</li>
                 <li className={activeLink === '/contact-us' ? 'primary-color' : ''} onClick={() => nav('/contact-us') }>{t('contact')}</li>
+                <li className={activeLink === '/privacy-policy' ? 'primary-color' : ''} onClick={() => nav('/privacy-policy') }>{t('privacyPolicy')}</li>
                 <li 
                   className="primary-color" 
                   onClick={() => setLanguage(language === 'en' ? 'ar' : 'en')}
