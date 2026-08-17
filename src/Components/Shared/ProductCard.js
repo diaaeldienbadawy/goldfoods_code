@@ -33,7 +33,7 @@ const ProductCard = ({ start, end, productImage, subTitle, title, Rating, isCate
         {/* Rating and Action Button */}
         <div className="seed-product-card-footer">
           <div className="seed-rating-badge">
-            <img src={smallStar} className="star-icon" alt="star" />
+            <img src={smallStar} className="star-icon" alt="" />
             <span className="rating-num">{Rating}</span>
           </div>
           

@@ -102,7 +102,7 @@ const ContactBox = () => {
               style={{ borderRadius: '24px', border: '1px solid rgba(0,0,0,0.03)' }}
             >
               <form action="https://formsubmit.co/Ceo@gf-egypt.com" method='POST' className='m-0'>
-                <input type="hidden" name="_next" value={'https://goldfoods-phi.vercel.app'}/>
+                <input type="hidden" name="_next" value={'https://www.gf-egypt.com'}/>
                 <input type="text" name="_honey" style={{ display: 'none' }}/>
 
                 <div className='row g-4'>

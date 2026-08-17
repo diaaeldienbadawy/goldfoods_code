@@ -11,7 +11,7 @@ const CategorysBar = () => {
         if(location.pathname === '/product/seed-el-balad') setActive(1)
         else if(location.pathname === '/product/fish') setActive(2)
         else if(location.pathname === '/product/meat') setActive(3)
-        else if(location.pathname === '/product/poulrty') setActive(4)
+        else if(location.pathname === '/product/poultry' || location.pathname === '/product/poulrty') setActive(4)
         else setActive(0)
     },[location.pathname])
 
@@ -32,7 +32,7 @@ const CategorysBar = () => {
                     <h3 className={`${active === 3 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/meat')}>
                       {language === 'en' ? 'Meat' : 'لحوم مجمدة'}
                     </h3>
-                    <h3 className={`${active === 4 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/poulrty')}>
+                    <h3 className={`${active === 4 ? 'primary-color' : 'branch-text'} c-pointer f-headline-IV px-2`} onClick={()=>nav('/product/poultry')}>
                       {language === 'en' ? 'Poultry' : 'دواجن مجمدة'}
                     </h3>
                 </div>

@@ -9,10 +9,19 @@ import HomeFactorySlider from '../Home/HomeFactorySlider'
 import HomeSuppliers from '../Home/HomeSuppliers'
 import HomeAnimatedFish from '../Home/HomeAnimatedFish'
 import HomePartner from '../Home/HomePartner'
+import SEOMetadata from '../Shared/SEOMetadata'
+import { useLanguage } from '../../context/LanguageContext'
 
 const HomePage = () => {
+  const { t } = useLanguage();
+  
   return (
     <>
+      <SEOMetadata 
+        title={t('seoHomeTitle')}
+        description={t('seoHomeDesc')}
+        canonical="/"
+      />
       <HeroSection/> 
       <Features/>
       <SeedElBaladSection/>

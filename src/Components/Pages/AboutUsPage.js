@@ -7,6 +7,7 @@ import ParentCompanySection from '../Shared/ParentCompanySection'
 import HomePartner from '../Home/HomePartner'
 import { useNav } from '../../hocks/layout/useNav'
 import { useLanguage } from '../../context/LanguageContext';
+import SEOMetadata from '../Shared/SEOMetadata'
 
 const AboutUsPage = () => {
   const {nav} = useNav()
@@ -14,6 +15,11 @@ const AboutUsPage = () => {
 
   return (
     <>
+      <SEOMetadata 
+        title={t('seoAboutTitle')}
+        description={t('seoAboutDesc')}
+        canonical="/about-us"
+      />
       <PageHeader topLinks={[{title: t('home') , like:'/'}]} pageTitle={t('aboutUs')}/>
       <PriefSection/>
       <HomeProducts/>

@@ -14,9 +14,9 @@ export default SectionHeading
 const TypeA = ({hint , title}) => {
   return (
     <>
-        <h3 className='text-center'>
+        <span className='h3 text-center d-block'>
             {hint}
-        </h3>
+        </span>
         <h2 className='text-center fw-bold '>
             {title}
         </h2>

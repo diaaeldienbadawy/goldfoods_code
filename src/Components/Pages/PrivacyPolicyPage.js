@@ -2,12 +2,18 @@ import React from 'react';
 import PageHeader from '../Shared/PageHeader';
 import { useLanguage } from '../../context/LanguageContext';
 import './PrivacyPolicy.css';
+import SEOMetadata from '../Shared/SEOMetadata';
 
 const PrivacyPolicyPage = () => {
   const { language, t } = useLanguage();
 
   return (
     <div className="privacy-page-wrapper pb-5">
+      <SEOMetadata 
+        title={t('seoPrivacyTitle')}
+        description={t('seoPrivacyDesc')}
+        canonical="/privacy-policy"
+      />
       <PageHeader 
         topLinks={[{ title: t('home'), like: '/' }]} 
         pageTitle={t('privacyPolicy')} 

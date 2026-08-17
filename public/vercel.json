@@ -1,6 +1,12 @@
 {
+  "redirects": [
+    { "source": "/product/poulrty", "destination": "/product/poultry", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/sitemap.xaml", "destination": "/sitemap.xaml" },
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" },
+    { "source": "/favicon.ico", "destination": "/favicon.ico" },
+    { "source": "/logo.png", "destination": "/logo.png" },
+    { "source": "/((?!static/|favicon\\.ico|logo\\.png|sitemap\\.xml|robots\\.txt).*)", "destination": "/" }
   ]
 }

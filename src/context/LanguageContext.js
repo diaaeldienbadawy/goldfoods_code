@@ -138,7 +138,21 @@ const translations = {
     parentCompanyDesc1: "Seed El Balad is more than just a brand; it is the proud flagship of Gold Foods. As the sole owner and operator, Gold Foods manages every stage of the journey—from sourcing and expert smoking techniques to quality control and distribution.",
     parentCompanyDesc2: "By keeping our operations in-house, we eliminate the middleman and deliver factory-fresh quality directly to our customers. When you choose Seed El Balad, you are choosing the direct output of Gold Foods’ commitment to excellence and culinary integrity.",
     parentLabel: "Parent Company & Factory",
-    brandLabel: "Flagship Premium Brand"
+    brandLabel: "Flagship Premium Brand",
+    
+    // SEO Titles and Descriptions
+    seoHomeTitle: "Gold Foods | Seafood & Smoked Fish Processing Manufacturer",
+    seoHomeDesc: "Gold Foods is Egypt's leading B2B seafood manufacturer, specializing in imported frozen fish distribution and natural oak smoked herring (Seed El Balad).",
+    seoFactoryTitle: "Gold Foods Factory | Smoked Fish Processing Plant",
+    seoFactoryDesc: "Visit the Gold Foods manufacturing hub in Belbeis, equipped with state-of-the-art European smoking houses, ISO standard quality assurance, and NFSA certifications.",
+    seoAboutTitle: "About Gold Foods | Corporate Profile & Seafood Importer",
+    seoAboutDesc: "Learn about Gold Foods, our corporate mission, vision, and our B2B seafood import and processing standards that support Egyptian supply chains.",
+    seoContactTitle: "Contact Gold Foods | B2B Wholesale & Partnerships",
+    seoContactDesc: "Contact the Gold Foods head office or factory team for B2B distribution, private label inquiries, and wholesale seafood distribution partnerships.",
+    seoPrivacyTitle: "Privacy Policy | Gold Foods Compliance",
+    seoPrivacyDesc: "Official Privacy Policy and data usage statement for Gold Foods web platforms, governing customer data safety and cookies.",
+    seoProductTitle: "Seafood & Frozen Meat Product Catalog | Gold Foods",
+    seoProductDesc: "Explore our catalog of B2B products including whole frozen mackerel, premium smoked herring (Seed El Balad), frozen poultry, and certified beef cuts."
   },
   ar: {
     // NavBar
@@ -275,7 +289,21 @@ const translations = {
     parentCompanyDesc1: "سيد البلد هي أكثر من مجرد علامة تجارية؛ إنها العلامة الرائدة والفخورة لشركة جولد فودز. بصفتها المالك والمشغل الوحيد، تدير جولد فودز كل مرحلة من مراحل الرحلة - بدءاً من الاستيراد وتقنيات التدخين الاحترافية إلى مراقبة الجودة والتوزيع.",
     parentCompanyDesc2: "من خلال إبقاء عملياتنا داخل الشركة بالكامل، فإننا نلغي الوسيط ونقدم جودة طازجة مباشرة من المصنع إلى عملائنا. عندما تختار سيد البلد، فإنك تختار الناتج المباشر لالتزام جولد فودز بالتميز والنزاهة الغذائية.",
     parentLabel: "الشركة الأم والمصنع",
-    brandLabel: "العلامة التجارية الرائدة"
+    brandLabel: "العلامة التجارية الرائدة",
+    
+    // SEO Titles and Descriptions
+    seoHomeTitle: "جولد فودز | مصنع لتصنيع وتعبئة الأسماك والرنجة المدخنة",
+    seoHomeDesc: "تعد شركة جولد فودز رائدة في استيراد وتصنيع المأكولات البحرية واللحوم المجمدة في مصر، والشركة المصنعة لعلامة الرنجة المدخنة الفاخرة سيد البلد.",
+    seoFactoryTitle: "مصنع جولد فودز | أحدث تقنيات تصنيع وتدخين الأسماك المجمدة",
+    seoFactoryDesc: "استكشف مصنع شركة جولد فودز في بلبيس بالشرقية، المجهز بأحدث خطوط إنتاج الرنجة وتعبئة المأكولات البحرية واللحوم تحت معايير الجودة والسلامة الصحية.",
+    seoAboutTitle: "عن شركة جولد فودز | الملف التعريفي والريادة في استيراد الأغذية",
+    seoAboutDesc: "الملف التعريفي لشركة جولد فودز ورسالتها في إثراء السوق المصري بأجود المأكولات البحرية واللحوم المجمدة المستوردة تحت رقابة صحية صارمة.",
+    seoContactTitle: "اتصل بشركة جولد فودز | الاستفسارات التجارية والاتصال المباشر",
+    seoContactDesc: "تواصل مع الإدارة والمبيعات لشركة جولد فودز للاستفسار عن صفقات الجملة وتوزيع المأكولات البحرية المدخنة والمجمدة أو موقع مصنعنا بالشرقية.",
+    seoPrivacyTitle: "سياسة الخصوصية | حماية البيانات جولد فودز",
+    seoPrivacyDesc: "بيان سياسة الخصوصية الرسمي الخاص بموقع شركة جولد فودز، والذي يوضح بروتوكولات حماية بيانات المستخدمين وملفات الكوكيز.",
+    seoProductTitle: "كتالوج المنتجات والمأكولات البحرية واللحوم | جولد فودز",
+    seoProductDesc: "تصفح منتجاتنا الغذائية من سمك الماكريل المجمد، الرنجة المدخنة الفاخرة (سيد البلد)، الدواجن الكاملة، وقطع لحوم البقر المستوردة للجملة."
   }
 };
 
@@ -283,15 +311,34 @@ export const LanguageProvider = ({ children }) => {
   const [language, setLanguageState] = useState('en');
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('goldfoods_lang');
-    if (savedLang) {
-      setLanguageState(savedLang);
+    // 1. Read 'lang' query parameter from URL (for crawlers and direct access)
+    const params = new URLSearchParams(window.location.search);
+    const queryLang = params.get('lang');
+    
+    if (queryLang === 'ar' || queryLang === 'en') {
+      setLanguageState(queryLang);
+      localStorage.setItem('goldfoods_lang', queryLang);
+    } else {
+      // Fallback to localStorage
+      const savedLang = localStorage.getItem('goldfoods_lang');
+      if (savedLang) {
+        setLanguageState(savedLang);
+      }
     }
   }, []);
 
   const setLanguage = (lang) => {
     setLanguageState(lang);
     localStorage.setItem('goldfoods_lang', lang);
+    
+    // 2. Synchronize URL query parameter dynamically without triggering page reload
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.pushState({}, '', url.toString());
+    } catch (e) {
+      console.error("Failed to update language URL query:", e);
+    }
   };
 
   const t = (key) => {

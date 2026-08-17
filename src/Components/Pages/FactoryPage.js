@@ -8,12 +8,18 @@ import SeedElBaladFactoryHeader from '../Factory/SeedElBaladFactoryHeader'
 import SeedElBaladProductionProcess from '../Factory/SeedElBaladProductionProcess'
 import SeedElBaladProductsShowcase from '../Factory/SeedElBaladProductsShowcase'
 import { useLanguage } from '../../context/LanguageContext';
+import SEOMetadata from '../Shared/SEOMetadata'
 
 const FactoryPage = () => {
   const { t } = useLanguage()
 
   return (
     <>
+      <SEOMetadata 
+        title={t('seoFactoryTitle')}
+        description={t('seoFactoryDesc')}
+        canonical="/factory"
+      />
       <PageHeader topLinks={[{title: t('home') , like:'/'}]} pageTitle={t('factory')}/> 
       <div className="container py-3">
         <SeedElBaladFactoryHeader/>

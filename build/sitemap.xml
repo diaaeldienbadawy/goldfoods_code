@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English (Default) Pages -->
+  <url>
+    <loc>https://www.gf-egypt.com/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/about-us</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/about-us?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/about-us" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/product</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/product?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/product" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/factory</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/factory?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/factory" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/contact-us</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/contact-us?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/contact-us" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/privacy-policy</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/privacy-policy?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/privacy-policy" />
+  </url>
+
+  <!-- Arabic Pages -->
+  <url>
+    <loc>https://www.gf-egypt.com/?lang=ar</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/about-us?lang=ar</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/about-us?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/about-us" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/product?lang=ar</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/product?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/product" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/factory?lang=ar</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/factory?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/factory" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/contact-us?lang=ar</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/contact-us?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/contact-us" />
+  </url>
+
+  <url>
+    <loc>https://www.gf-egypt.com/privacy-policy?lang=ar</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.gf-egypt.com/privacy-policy?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gf-egypt.com/privacy-policy" />
+  </url>
+
+</urlset>

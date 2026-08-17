@@ -33,7 +33,7 @@ export const productCatregories = [
         subtitle: 'Poultry',
         title: 'Chicken',
         rating: 4.7,
-        link: '/product/poulrty'
+        link: '/product/poultry'
       }
     ]
   }

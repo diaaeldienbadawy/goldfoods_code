@@ -24,7 +24,7 @@ const HomeProducts = () => {
         title: t('meatTitle'),
         subtitle: t('factory')
       };
-    } else if (product.link === '/product/poulrty') {
+    } else if (product.link === '/product/poultry' || product.link === '/product/poulrty') {
       return {
         title: t('poultryTitle'),
         subtitle: t('factory')
