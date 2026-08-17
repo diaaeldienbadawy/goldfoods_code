@@ -9,6 +9,7 @@ import SeedElBaladProductionProcess from '../Factory/SeedElBaladProductionProces
 import SeedElBaladProductsShowcase from '../Factory/SeedElBaladProductsShowcase'
 import { useLanguage } from '../../context/LanguageContext';
 import SEOMetadata from '../Shared/SEOMetadata'
+import FactorySeoSection from '../Factory/FactorySeoSection'
 
 const FactoryPage = () => {
   const { t } = useLanguage()
@@ -25,6 +26,7 @@ const FactoryPage = () => {
         <SeedElBaladFactoryHeader/>
       </div>
       <PriefSection/> 
+      <FactorySeoSection/>
       <SeedElBaladProductionProcess/>
       <div className="container py-5">
         <SeedElBaladProductsShowcase/>
