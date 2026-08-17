@@ -1,9 +1,8 @@
 import React from 'react'
 import logo from '../../assets/images/logo.png'
 import facebookIcon from '../../assets/images/icons/Facebook.svg'
-import twitterIcon from '../../assets/images/icons/Twitter.svg'
 import instagramIcon from '../../assets/images/icons/Instagram.svg'
-import linkedinIcon from '../../assets/images/icons/Linkedin.svg'
+import tiktokIcon from '../../assets/images/icons/tiktok.svg'
 import webIcon from '../../assets/images/icons/arcticons_emoji-web.svg'
 import locationIcon from '../../assets/images/icons/mdi_location.svg'
 import phoneIcon from '../../assets/images/icons/small-phone-icon.svg'
@@ -30,10 +29,15 @@ const Footer = () => {
                 {t('footerDesc')}
               </div>
               <div className='d-flex justify-content-start m-2 pt-2 social-icons'>
-                <img src={facebookIcon} className='m-2' alt="Facebook" />
-                <img src={twitterIcon} className='m-2' alt="Twitter" />
-                <img src={instagramIcon} className='m-2' alt="Instagram" />
-                <img src={linkedinIcon} className='m-2' alt="LinkedIn" />
+                <a href="https://www.facebook.com/share/1CssPVwxt6/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+                  <img src={facebookIcon} className='m-2' alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/seed.elbalad.egypt?igsh=MTZkZGh5czk0aGN3Yw==&igsi=MTZkZGh5czk0aGN3Yw==" target="_blank" rel="noopener noreferrer">
+                  <img src={instagramIcon} className='m-2' alt="Instagram" />
+                </a>
+                <a href="https://www.tiktok.com/@seed_el_balad?_r=1&_t=ZS-98r0RmY0IOQ" target="_blank" rel="noopener noreferrer">
+                  <img src={tiktokIcon} className='m-2' alt="TikTok" />
+                </a>
               </div>
             </div>
             <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-5'>

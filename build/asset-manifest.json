@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5c10307e.css",
-    "main.js": "/static/js/main.97e328d3.js",
+    "main.js": "/static/js/main.c9a6751e.js",
     "static/media/productsPageImage.png": "/static/media/productsPageImage.b9297b189d848a7c330d.png",
     "static/media/Group-431.png": "/static/media/Group-431.328790836e7a33576b26.png",
     "static/media/logo.png": "/static/media/logo.2f4688e21bd154c0ddeb.png",
@@ -51,19 +51,18 @@
     "index.html": "/index.html",
     "static/media/small-phone-icon.svg": "/static/media/small-phone-icon.7655c38d12421a1e391b57fe2cc94249.svg",
     "static/media/phone-icon.svg": "/static/media/phone-icon.91d6e46da4c27cee01a68c4a92eddb20.svg",
-    "static/media/Twitter.svg": "/static/media/Twitter.0de9946c739234ac90715ecabfe0252e.svg",
     "static/media/arcticons_emoji-web.svg": "/static/media/arcticons_emoji-web.5a23d5e93e7378103922d6163d70a85d.svg",
     "static/media/mdi_location.svg": "/static/media/mdi_location.6ad688a4007d35f4279cda6108ef464b.svg",
     "static/media/Instagram.svg": "/static/media/Instagram.5a84b7efc632635bdb0fc6c8d1199508.svg",
-    "static/media/Linkedin.svg": "/static/media/Linkedin.26f48cd73df7310ae2acec70460ca0e8.svg",
     "static/media/Facebook.svg": "/static/media/Facebook.8d55265feab2c598ad94713610bcd0ae.svg",
     "static/media/Vector.svg": "/static/media/Vector.1f91e8e58b2cc7bce6282ce3e831920c.svg",
     "static/media/small-star.svg": "/static/media/small-star.b13b1a0b97a9b9e73ce93e016f324267.svg",
+    "static/media/tiktok.svg": "/static/media/tiktok.eed7cbd7cc5193a1209bf1581da11989.svg",
     "main.5c10307e.css.map": "/static/css/main.5c10307e.css.map",
-    "main.97e328d3.js.map": "/static/js/main.97e328d3.js.map"
+    "main.c9a6751e.js.map": "/static/js/main.c9a6751e.js.map"
   },
   "entrypoints": [
     "static/css/main.5c10307e.css",
-    "static/js/main.97e328d3.js"
+    "static/js/main.c9a6751e.js"
   ]
 }
