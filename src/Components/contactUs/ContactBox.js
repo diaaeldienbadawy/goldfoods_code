@@ -1,13 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext';
 
 const ContactBox = () => {
   const { language, t } = useLanguage()
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success') === 'true') {
+      setShowSuccess(true);
+      // Trigger TikTok Pixel Contact event
+      if (window.ttq) {
+        window.ttq.track('Contact');
+      }
+    }
+  }, []);
 
   return (
     <div className='py-5' style={{ backgroundColor: '#f8fafc' }}>
       <div className='container py-4'> 
         
+        {showSuccess && (
+          <div className="alert alert-success text-center mb-5 p-3 rounded-4 border-0 shadow-sm" style={{ backgroundColor: '#e2f0d9', color: '#385723' }}>
+            <span className="material-symbols-outlined align-middle me-2">check_circle</span>
+            <span className="fw-semibold align-middle">
+              {language === 'en' 
+                ? 'Thank you! Your message has been sent successfully. We will contact you soon.' 
+                : 'شكراً لك! تم إرسال رسالتك بنجاح. سنتواصل معك في أقرب وقت.'}
+            </span>
+          </div>
+        )}
+
         {/* Section Header */}
         <div className='text-center mb-5'>
           <span 
@@ -102,7 +125,7 @@ const ContactBox = () => {
               style={{ borderRadius: '24px', border: '1px solid rgba(0,0,0,0.03)' }}
             >
               <form action="https://formsubmit.co/Ceo@gf-egypt.com" method='POST' className='m-0'>
-                <input type="hidden" name="_next" value={'https://www.gf-egypt.com'}/>
+                <input type="hidden" name="_next" value={'https://www.gf-egypt.com/contact-us?success=true'}/>
                 <input type="text" name="_honey" style={{ display: 'none' }}/>
 
                 <div className='row g-4'>
