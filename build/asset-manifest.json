@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5c10307e.css",
-    "main.js": "/static/js/main.057e4d83.js",
+    "main.js": "/static/js/main.8707f78c.js",
     "static/media/productsPageImage.png": "/static/media/productsPageImage.b9297b189d848a7c330d.png",
     "static/media/Group-431.png": "/static/media/Group-431.328790836e7a33576b26.png",
     "static/media/logo.png": "/static/media/logo.2f4688e21bd154c0ddeb.png",
@@ -47,8 +47,8 @@
     "static/media/Vector-289-1.png": "/static/media/Vector-289-1.ca2359f3431943379035.png",
     "static/media/Group.svg": "/static/media/Group.63f17b9d8b40da9a49719f61b315ef46.svg",
     "static/media/pepicons-pop_checkmark-filled.svg": "/static/media/pepicons-pop_checkmark-filled.b18dbe22646898cfb898c24cd230d3c8.svg",
-    "static/media/material-symbols_star.svg": "/static/media/material-symbols_star.750fb61a41029fe3dd20c0848b92cd00.svg",
     "index.html": "/index.html",
+    "static/media/material-symbols_star.svg": "/static/media/material-symbols_star.750fb61a41029fe3dd20c0848b92cd00.svg",
     "static/media/small-phone-icon.svg": "/static/media/small-phone-icon.7655c38d12421a1e391b57fe2cc94249.svg",
     "static/media/phone-icon.svg": "/static/media/phone-icon.91d6e46da4c27cee01a68c4a92eddb20.svg",
     "static/media/arcticons_emoji-web.svg": "/static/media/arcticons_emoji-web.5a23d5e93e7378103922d6163d70a85d.svg",
@@ -59,10 +59,10 @@
     "static/media/small-star.svg": "/static/media/small-star.b13b1a0b97a9b9e73ce93e016f324267.svg",
     "static/media/tiktok.svg": "/static/media/tiktok.eed7cbd7cc5193a1209bf1581da11989.svg",
     "main.5c10307e.css.map": "/static/css/main.5c10307e.css.map",
-    "main.057e4d83.js.map": "/static/js/main.057e4d83.js.map"
+    "main.8707f78c.js.map": "/static/js/main.8707f78c.js.map"
   },
   "entrypoints": [
     "static/css/main.5c10307e.css",
-    "static/js/main.057e4d83.js"
+    "static/js/main.8707f78c.js"
   ]
 }

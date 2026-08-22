@@ -41,6 +41,11 @@ export const useNav = () => {
         setActiveLink(location.pathname);
         setIsOpen(false);
         scrollTop(location.pathname, false);
+        
+        // Track PageView in TikTok Pixel on routing changes
+        if (window.ttq) {
+            window.ttq.page();
+        }
     }, [location.pathname]);
 
     return {
